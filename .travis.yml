@@ -28,8 +28,4 @@ script:
   - java -cp .:../../junit.jar HelloMondeTest
   - cd ../OPTIweb/test
   - cp OPTIwebprof.html /tmp/OPTIweb.html
-<<<<<<< HEAD
   - casperjs test casperAccueil.js
-=======
-  - casperjs test casperAccueil.js
->>>>>>> origin/master
