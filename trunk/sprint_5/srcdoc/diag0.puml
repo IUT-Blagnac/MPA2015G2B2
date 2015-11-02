@@ -5,10 +5,10 @@
 @startuml
 '-----------------------------------
 
-class PROFS {
-        NOM
-        PRENOM
-        SEVERITE
+class CLIENTS {
+	NOM
+	PRENOM
+	SOLDE
 }
 
 '-----------------------------------

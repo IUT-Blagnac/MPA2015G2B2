@@ -1,4 +1,4 @@
-= OPTIweb : Documentation Utilisateur
+﻿= OPTIweb : Documentation Utilisateur
 :Author:  DUT/INFO/M3301
 :lang: fr
 
@@ -6,8 +6,7 @@
 'OPTIweb.html' est une application HTML de *consultation*
 des projets tutorés gérés par OPTI.
 
-'OPTIweb.html' est compatible avec l'ensemble des
-navigateurs et supports du moment (PC, tablettes, smartphones).
+'OPTIweb.html' est non compatible avec les navigateurs Google Chrome et Opéra en local. Il fonctionne sur tous les supports (PC, tablettes, smartphones).
 *********************
 
 == Fiche projet - SPRINT 4

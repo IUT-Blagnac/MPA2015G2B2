@@ -1,0 +1,55 @@
+﻿= Documentation SPRINT-1
+:Author:  Groupe projet 2B2
+:doctitle: Documentation du Projet MPA-M3301-G2B2
+:slideshowlocation: Your computer
+:copyright: {date={localdate}}, {slideshowlocation} *** {author} *** Powered by AsciiDoc and W3C Slidy &#169; 
+:revnumber: -1
+
+include::docConf.txt[]
+
+== Exemple de section
+
+- Liste simple
+- Liste simple suite
+
+Paragraphe paragraphe paragraphe paragraphe
+paragraphe paragraphe paragraphe paragraphe
+Paragraphe paragraphe paragraphe paragraphe
+paragraphe paragraphe paragraphe paragraphe
+Paragraphe paragraphe paragraphe paragraphe
+paragraphe paragraphe paragraphe paragraphe
+
+
+. Liste numérotée
+. Liste numérotée suite
+
+Pour le texte : *gras*, _italique_, +code+.
+ 
+=== Exemple de sous-section
+
+.Une image et sa légende
+image::sieste.png[link="sieste.png",width="70%"]
+
+== Code source et diagrammes UML
+
+Voici une façon simple d'intégrer un link:{src}HelloMonde.java[code source] :
+[source,java]
+----
+include::{src}HelloMonde.java[]
+----
+
+ou du code {plantUML} (source link:{srcdoc}diag0.puml[ici]) :
+
+///////////////////////
+imagesdir:
+
+["plantuml","{srcdoc}diag0.png"]
+----
+include::{srcdoc}diag0.puml[]
+----
+///////////////////////
+
+image::diag0.png[]
+
+Voir aussi CAUTION, WARNING et TIP
+===

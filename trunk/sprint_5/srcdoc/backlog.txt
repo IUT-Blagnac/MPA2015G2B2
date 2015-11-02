@@ -1,0 +1,44 @@
+== Backlog de Produit du Projet OPTI
+Les fonctionnalités initiales demandées sont les suivantes :
+
+* Liste des sujets de projet tutoré de l’année
+
+** Créer/Supprimer/Modifier un sujet
+
+** Lister les sujets avec filtres
+
+* Voeux des groupes d'étudiants
+
+** Définir des groupes d'étudiants
+
+** Associer des étudiants à des groupes
+
+** Définir les voeux d’un groupe
+
+** etc
+
+* Affectation des projets aux groupes d'étudiants
+
+** Définir (affectation) un sujet pour un groupe
+
+** Lister le nombre de voeux par rang pour un sujet
+
+** Lister pour un groupe le nombre de "concurrents" par rang de voeux.
+
+** Lister les sujets affectés / non affectés
+
+** Lister les groupes affectés / non affectés
+
+** Calcul automatique de pré-affectation "au mieux" sur un ensemble de groupes non affectés
+
+** etc
+
+* Affectation des intervenants sur chaque projet tutoré
+
+** Définir les intervenants d’un projet tutoré
+
+** Lister les projets par intervenant
+
+** Lister les intervenants par projet
+
+** etc

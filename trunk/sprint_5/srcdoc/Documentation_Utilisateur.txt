@@ -1,0 +1,178 @@
+﻿= Documentation SPRINT2
+:Author:  Groupe projet 2B2 
+:doctitle: Documentation Utilisateur du Projet MPA-M3301-G2B2
+:slideshowlocation: Your computer
+:copyright: {date={localdate}}, {slideshowlocation} *** {author} *** Powered by AsciiDoc and W3C Slidy &#169; 
+:revnumber: 3 ; Université Toulouse 2 - IUT de Blagnac - DUT Info S3/Module MPA - OPTI - SPRINT 3
+
+include::docConf.txt[]
+
+== Membres du groupes
+- Léo Calvis
+- François-Marie d'Aboville
+- Thomas Bonfill
+- Jordan Brocardio
+- Tim Dazayous
+- Alexandre Erb
+
+
+include::backlog.txt[]
+
+== Fonctionnalités disponibles à la fin du SPRINT
+A la fin de ce SPRINT, les fonctionnalités disponibles seront :
+
+* Onglet sujets :
+** Voir la liste des sujets
+** Créer un sujet
+** Supprimer un sujet
+** Modifier un sujet
+* Onglet Etudiant
+** Voir la liste des groupes
+*** Ajouter des groupes
+** Voir la liste des étudiants
+*** Ajouter des étudiants 
+*** Modifier des etudiants
+*** Supprimer des étudiants 
+
+== Présentation de l'interface et des fonctionnalités de base
+=== Interface de base
+L'interface se présente en plusieurs parties bien disctinctes, dont nous allons voir l'organisation ici.
+
+.Interface de l'application
+image::interface.png[link=interface.png,width=500]
+
+Après avoir ouvert l'application, vous pouvez effectuez plusieurs action de base présentez juste après.
+
+=== Fonctionnalités de base : le menu Fichier
+
+.Fichier
+image::fichier.png[link=fichier.png,width=100]
+
+Dans ce menu on peut accéder à trois fonctionnalités :
+
+* Ouvrir fichier csv : 
+
+.Fenetre d'ouverture du fichier csv
+image::ouvrircsv.png[link=ouvrircsv.png,width=250]
+
+* Sauvegarder CSV : pemet de sauvegarder un fichier
+
+L'ouverture d'un fichier csv permet de generer toute la base de données contenant les sujets.
+Ceci n'est pas indispensable à la création de nouveaux sujets, ainsi qu'à la gestion d'un nouveau projet.
+
+* A propos :
+
+.A propos
+image::apropos.png[link=apropos.png,width=300]
+
+Cette fenetre detaille les réalisateurs de l'application ainsi que quelques informations sur la version.
+
+* Quitter :
+
+.Quitter
+image::quitter.png[link=quitter.png,width=500]
+
+Ouvre une fenetre demandant la confirmation pour quitter l'application.
+Dans le cas où vous selectionnez "Oui", l'application se ferme, sinon la fenetre se ferme et vous pouvez continuer à utiliser normalement l'application.
+
+
+
+== Description des différentes fonctionnalités
+
+Une fois un fichier csv ouvert, l'onglet sujet se rempli de sujets et on accède à différentes fonctionnalités.
+
+
+=== Onglet Sujets
+
+.L'onglet Sujets au sein de l'interface graphique
+image::sujets.png[link="sujets.png",width="500"]
+
+Cet onglet, dans la partie gauche, permet de visualiser la liste des sujets.
+La partie droite de l'onglet affiche le sujet selectionné en plusieurs partie.
+La partie inferieur contient des boutons permettant les differentes actions : ajout, modification et suppression de sujets.
+
+==== Partie visualisation
+
+.Entete de la partie visualisation
+image::entetev.png[link=entetev.png,width=300]
+
+* Acronyme : nom du sujet plus cours afin de le reperer plus facilement
+* Titre : titre entier du sujet
+* Onglet Contexte : décrit le contexte du projet, l'histoire de certaines entreprises afin de se reperer pour mieux comprendre le sujet
+* Onglet Projet : décrit précisement les objectifs attendus
+* Onglet Correspondant : contient les correspondant ainsi que leurs coordonnées en lien avec ce sujet
+
+.Outils, situé en bas de la partie de droite
+image::outils.png[link=outils.png,width=300]
+
+* Outils : renseigne les outils nécessaire au projet, ainsi que ceux qui sont conseillés
+
+==== Partie liste
+
+Dans cette partie, on peut visualiser la liste des sujets.
+
+
+==== Partie inférieur
+
+.Boutons du bas de la page
+image::boutonsujet.png[link="boutonsujet.png",width="650"]
+
+Voici les actions réalisables avec ces boutons :
+
+* Ajout d'un nouveau sujet :
+
+.Ajout d'un nouveau sujet
+image::creer.png[link="creer.png",width="350"]
+
+Après le remplissage de ce formulaire, un nouveau sujet sera créer au sein de la base de données.
+
+* Modification d'un sujet
+
+.Modification d'un sujet
+image::modifier.png[link="modifier.png",width=300"]
+
+Ce bouton active la modification d'un sujet, et on peut modifier directement au sein de la partie visualisation 
+
+* Supprimer un sujet
+
+.Suppression d'un sujet
+image::supprimer.png[link="supprimer.png",width="600"]
+
+Ce bouton permet de supprimer un sujet en selectionnant le sujet pour le visualiser, le bouton est grisé si aucun sujet n'est selectionné.
+
+=== Onglet Etudiants 
+
+.Onglet étudiants
+image::etudiants.png[link="etudiants.png"],width="600"]
+
+Cet onglet se présente en plusieurs partie :
+
+* liste des groupes
+** bouton ajouter
+* etudiants dans le groupe 
+* liste des etudiants 
+** section de boutons ajouter, créer, modifier et supprimer
+
+==== Liste des groupes 
+
+Le fait de cliquer sur le bouton "Creer" ajoute un groupe dans la liste.
+Le chiffre a gauche correspond au nombre d'étudiants dans le groupe et le groupe porte le nom de "groupe n", n allant de 1 au nombre de groupe de la liste.
+
+==== Liste des étudiants 
+Dans cette partie on peut voir la liste des étudiants. On peut aussi en ajouter en cliquant sur créer.
+
+.création étudiants
+image::ajoutetu.png[link="ajoutetu.png"],width="250"]
+
+Si on clique sur modifier, une fenetre assez similaire avec le nom de l'étudiant sélectionné s'ouvre et on peut modifier le nom et le prenom.
+
+Si on clique sur ajout l'etudiant s'ajoute dans le groupe selectionné.
+
+Si on clique sur supprimmer, l'étudiant ce supprime.
+
+
+== Ce que fais le SPRINT 3...
+Notre SPRINT 3 permet d'ouvrir un fichier pour generer tous les sujets ainsi que de les supprimer. On peut également en créer des nouveaux, et les supprimer.
+On peut également visualiser les groupes et les étudiants dans l'onglet étudiant.
+
+

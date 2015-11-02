@@ -1,0 +1,85 @@
+﻿= Documentation SPRINT 3
+:Author:  Groupe projet 2B2 
+:doctitle: Documentation Technique de MakeOptiWeb
+:slideshowlocation: Your computer
+:copyright: {date={localdate}}, {slideshowlocation} *** {author} *** Powered by AsciiDoc and W3C Slidy &#169; 
+:revnumber: 2 - Université Toulouse 2 - IUT de Blagnac - DUT Info S3/Module MPA - OPTI - SPRINT 4
+:toc: Table des matières
+:lang: fr
+
+*********************
+'OPTIweb.html' est une application HTML de *consultation*
+des projets tutorés gérés par OPTI.
+
+'OPTIweb.html' est non compatible avec le
+navigateur Google Chrome mais l'est pour les supports du moment (PC, tablettes, smartphones).
+*********************
+
+== Fiche projet - SPRINT 4
+
+[icon="images/UT2J.png"]
+[TIP]
+====
+Membres de l'équipe : Léo Calvis, François-Marie d'Aboville, Thomas Bonfill, Jordan Brocardio, Tim Dazayous et Alexandre Erb
+
+
+*Université Toulouse 2 - IUT de Blagnac*
+
+Formation:: DUT INFO S3/Module MPA
+Projet:: OPTI/OPTIweb
+====
+
+== Comment lancer l'application OPTIweb
+
+. Sur tout support, lancer le fichier OptiWeb.html dans un navigateur
+
+
+[NOTE]
+====
+L'application 'OPTIweb.html' nécessite une connexion Internet
+lors de son lancement.
+
+Une fois chargée dans un navigateur, aucune communication réseau
+n'est éffectuée : vous pouvez alors travailler hors connexion.
+====
+
+== Comment sauvegarder l'application OPTIweb
+
+. Enregistrer le fichier 'OPTIweb.html' sur votre support (environ 30Ko)
+. Charger le fichier 'OPTIweb.html' local dans un navigateur pour lancer l'application (une connexion réseau n'est requise qu'au chargement).
+
+== Génération du fichier 'OPTIweb.html'
+
+Lancer le fichier MakeOPTIweb.bat pour généré 'OPTIWeb.html'
+L'application de consultation 'OPTIweb.html' est intégralement générée
+par le programme 'MakeOPTIweb.java' qui à partir des fichiers json généré par la bibliothèque CsvToJson (Sujets, Etudiants, Intervenants, Projets ...) fabrique le fichier 'OPTIweb.html'.
+Ce programme crée le fichier html en concaténant les balises du code html (sous forme de String) avec les valeurs des fichiers csv.
+
+NOTE: Le programme 'MakeOPTIweb.java' utilise la librairie de gestion des fichiers csv disponible dans le projet 'OPTI'.
+
+== Code MakeOptiWeb.java
+  
+On utilise un String pour ensuite l'enregistrer dans un fichier .html
+== OPTIWeb : Test Casper
+
+Casper permet de tester les différents aspect de l'application HTML :
+
+- casperAccueil
+- casperCredits
+- casperEtudiants
+- casperIntervenants
+- casperProjets
+- casperSujets
+
+Par exemple, lors de ces test, nous regardons si les sujets de l'interface sont ceux que nous avons importé au format json.
+Aussi, nous vérifions les réactions de l'application lorsque nous cliquons sur différents boutons. Par exemple, lorsque nous 
+cliquons sur le boutton "crédits", des tests sont alors réalisés pour vérfier si l'affichage des informations est correct.
+Il y a plus de 200 insertions pour l'application OptiWeb.
+Les tests sont lancés à partir du fichier casperjs.bat qui est dans le repertoire test à la racine du sprint 4.
+
+Casper doit aussi mettre à jour les screenshot de la documentation, ce qui n'est pas le cas à l'heure actuelle. Les screenshots ne sont pas enregistrés.
+
+== OptiWeb : Test MakeOPTIWebTest
+
+Le programme de test testMakeOPTIWeb.java vérifie si le fichier a bien été généré et si le contenu du fichier OptiWeb.hmtl est bien égal à ce que l'on souhaite obtenir.
+
