@@ -1,9 +1,10 @@
-@@ -7,7 +7,7 @@ before_install:
-   - '[ "${TRAVIS_NODE_VERSION}" != "0.8" ] || npm install -g npm@1.4.28'
-   - npm install -g npm@latest
- 
--#travis build speed up
-+#travis build  speed up
- sudo: false
- cache:
-   directories:
+language: java
+script:
+  - java -version
+  - javac -version
+  - python -V
+  - phantomjs -v
+  - echo Hello from DUT INFO Blagnac
+  - ls -alF
+  - cd trunk/sprint_5
+  - javac -cp .:./bin -d ./bin ./src/HelloMonde.java
