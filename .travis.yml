@@ -28,9 +28,9 @@ script:
   - java -cp .:../../junit.jar HelloMondeTest
   - cd ../OPTIweb/test
   - cp OPTIwebprof.html /tmp/OPTIweb.html
-  - casperjs.bat test casperCredits.js
-  - casperjs.bat test casperEtudiants.js
-  - casperjs.bat test casperIntervenants.js
-  - casperjs.bat test casperProjets.js
-  - casperjs.bat test casperSujets.js
-  - casperjs.bat test casperAccueil.js
+  - casperjs test casperCredits.js
+  - casperjs test casperEtudiants.js
+  - casperjs test casperIntervenants.js
+  - casperjs test casperProjets.js
+  - casperjs test casperSujets.js
+  - casperjs test casperAccueil.js
