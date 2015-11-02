@@ -26,7 +26,12 @@ script:
   - ls -alF srcdoc
   - cd bin
   - java -cp .:../../junit.jar HelloMondeTest
-  - cd ../OPTIweb/test
+  - cd ../OPTIweb
+  - javac -cp .:./bin -d ./bin ./src/MakeOPTIweb.java
+  - javac -cp .:./bin -d ./bin ./src/CsvToJson.java
+  - javac -cp .:./bin:../junit.jar -d ./bin ./src/TestMakeOPTIwebTest.java
+  - java -cp .:../../junit.jar TestMakeOPTIwebTest
+  - cd ./test
   - cp OPTIwebprof.html /tmp/OPTIweb.html
   - casperjs test casperCredits.js
   - casperjs test casperEtudiants.js
