@@ -6,5 +6,5 @@ script:
   - phantomjs -v
   - echo Hello from DUT INFO Blagnac
   - ls -alF
-  - cd sprint_5
+  - cd trunk/sprint_5
   - javac -cp .:./bin -d ./bin ./src/HelloMonde.java
