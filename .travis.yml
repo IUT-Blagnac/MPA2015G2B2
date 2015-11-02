@@ -28,7 +28,7 @@ script:
   - java -cp .:../../junit.jar HelloMondeTest
   - cd ../OPTIweb
   - javac -cp .:./bin:../junit.jar -d ./bin ./src/MakeOPTIweb.java
-  - javac -cp .:./bin:../junit.jar -d ./bin ./src/CsvToJson.java
+  - javac -cp .:./bin:../../junit.jar -d ./bin ./src/CsvToJson.java
   - javac -cp .:./bin:../junit.jar -d ./bin ./src/TestMakeOPTIwebTest.java
   - cd bin
   - java -cp .:../../junit.jar TestMakeOPTIwebTest
