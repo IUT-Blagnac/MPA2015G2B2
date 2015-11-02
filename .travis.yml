@@ -32,7 +32,7 @@ script:
   - javac -cp .:./bin:../junit.jar -d ./bin ./src/TestMakeOPTIwebTest.java
   - cd bin
   - java -cp .:../../junit.jar TestMakeOPTIwebTest
-  - cd ./test
+  - cd ../test
   - cp OPTIwebprof.html /tmp/OPTIweb.html
   - casperjs test casperCredits.js
   - casperjs test casperEtudiants.js
