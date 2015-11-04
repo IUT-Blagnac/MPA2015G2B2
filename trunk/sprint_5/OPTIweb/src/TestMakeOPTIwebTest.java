@@ -1,4 +1,4 @@
-//import org.junit.Assert.assertEquals;
+import org.junit.Assert.assertEquals;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-//import org.junit.Test;
+import org.junit.Test;
 
 import junit.framework.*;
 
