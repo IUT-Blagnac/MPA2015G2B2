@@ -30,6 +30,9 @@ script:
   - javac -cp .:./bin:../junit.jar -d ./bin ./src/MakeOPTIweb.java
   - javac -cp .:./bin:../../junit.jar -d ./bin ./src/CsvToJson.java
   - javac -cp .:./bin:../../junit.jar -d ./bin ./src/MakeOPTIwebTest.java
+  - java -cp ./bin/ MakeOPTIweb sujets2014_2015.csv etudiants2014_2015.csv intervenants2014_2015.csv projets2014_2015.csv
+  - java -cp ./bin/ CsvToJson etudiants2014_2015.csv
+  - java -cp ./bin/ CsvToJson intervenants2014_2015.csv
   - cd bin
   - java -cp .;../../../junit.jar junit.textui.TestRunner MakeOPTIwebTest
   - cd ../test
