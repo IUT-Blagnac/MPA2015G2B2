@@ -31,7 +31,7 @@ script:
   - javac -cp .:./bin:../../junit.jar -d ./bin ./src/CsvToJson.java
   - javac -cp .:./bin:../../junit.jar -d ./bin ./src/MakeOPTIwebTest.java
   - cd bin
-  - java -cp .:../../junit.jar MakeOPTIwebTest
+  - java -cp .;../../../junit.jar junit.textui.TestRunner MakeOPTIwebTest
   - cd ../test
   - cp OPTIwebprof.html /tmp/OPTIweb.html
   - casperjs test casperCredits.js
