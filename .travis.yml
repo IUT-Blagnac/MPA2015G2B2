@@ -36,7 +36,7 @@ script:
   - java -cp ./ CsvToJson ../etudiants2014_2015.csv
   - java -cp ./ CsvToJson ../intervenants2014_2015.csv
   - java -cp .:../../../../junit.jar:./ MakeOPTIwebTest
-  - cd test
+  - cd ../test
   - cp OPTIwebprof.html /tmp/OPTIweb.html
   - casperjs test casperCredits.js
   - casperjs test casperEtudiants.js
