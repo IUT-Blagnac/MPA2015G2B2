@@ -24,7 +24,9 @@ script:
   - javac -cp .:./bin:../../../junit.jar -d ./bin ./src/MakeOPTIweb.java
   - javac -cp .:./bin:../../../junit.jar -d ./bin ./src/CsvToJson.java
   - javac -cp .:./bin:../../../junit.jar -d ./bin ./src/MakeOPTIwebTest.java
-  - cd ..
+  - cd bin
+  - java -cp .:../../../../junit.jar:./ MakeOPTIwebTest
+  - cd ../..
   - java -jar ../plantuml.jar -Tpng -o srcdoc/images srcdoc/diag0.puml
   - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/presentationFinale.html srcdoc/presentationFinale.txt
   - ls -alF srcdoc
