@@ -3,7 +3,7 @@
 // :iconsdir: /Users/thomas/dev/images/icons
 :imagesdir: images
 :src: ../src/
-:srcdoc: ./
+:srcdoc: ../srcdoc
 //--------------------------------
 :coderay-css: style
 :data-uri!:

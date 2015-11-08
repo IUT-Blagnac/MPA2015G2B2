@@ -5,8 +5,6 @@
 :copyright: {date={localdate}}, {slideshowlocation} *** {author} *** Powered by AsciiDoc and W3C Slidy &#169; 
 :revnumber: 2 - Université Toulouse 2 - IUT de Blagnac - DUT Info S3/Module MPA - OPTI - SPRINT 3
 
-include::docConf.txt[]
-
 == Membres du groupes 
 - Léo Calvis
 - François-Marie d'Aboville
@@ -99,16 +97,16 @@ Ces différentes données sont stockées dans des ArrayList.
 
 === Modèle de données
 
-image::ModeleDonnees.png[]
+image::images/ModeleDonnees.png[]
 
 Le modèle de données ci-dessus est le model de données actuel.
 Le modèle de données final sera le suivant lorsque toutes les fonctionnalitées seront implémentées :
 
-image::modeleDonneesFinal.png[]
+image::images/modeleDonneesFinal.png[]
 
 === Diagramme de cas d'utilisation :
 
-image::Diagrammedecasdutilisation2.png[]
+image:images/Diagrammedecasdutilisation2.png[]
 
 L'administrateur peut donc ouvrir et sauvegarder un fichier CSV (contenant des sujets uniquement pour le moment).
 L'administrateur peut afficher la liste des sujets, créer un sujet, modifier un sujet et supprimer un sujet.
