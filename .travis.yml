@@ -7,7 +7,6 @@ before_script:
   - wget https://github.com/n1k0/casperjs/archive/1.0.3.tar.gz -O /tmp/casper.tar.gz
   - tar -xvf /tmp/casper.tar.gz
   - export PATH=$PATH:$PWD/casperjs-1.0.3/bin/
-  - chmod +x junit.jar
 language: java
 script:
   - java -version
@@ -20,17 +19,17 @@ script:
   - echo Hello from DUT INFO Blagnac
   - ls -alF
   - cd trunk/sprint_5
-  - javac -cp ./src:./bin:../junit.jar -d ./bin ./src/Controller/*.java ./src/Model/*.java ./src/View/*.java ./src/Csv/*.java
+  - javac -cp ./src:./bin:../../junit.jar -d ./bin ./src/Controller/*.java ./src/Model/*.java ./src/View/*.java ./src/Csv/*.java
   - cd OPTIweb
-  - javac -cp .:./bin:../../junit.jar -d ./bin ./src/MakeOPTIweb.java
-  - javac -cp .:./bin:../../junit.jar -d ./bin ./src/CsvToJson.java
-  - javac -cp .:./bin:../../junit.jar -d ./bin ./src/MakeOPTIwebTest.java
+  - javac -cp .:./bin:../../../junit.jar -d ./bin ./src/MakeOPTIweb.java
+  - javac -cp .:./bin:../../../junit.jar -d ./bin ./src/CsvToJson.java
+  - javac -cp .:./bin:../../../junit.jar -d ./bin ./src/MakeOPTIwebTest.java
   - cd ..
   - java -jar ../plantuml.jar -Tpng -o srcdoc/images srcdoc/diag0.puml
   - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/presentationFinale.html srcdoc/presentationFinale.txt
   - ls -alF srcdoc
   - cd bin
-  - java -cp .;../../../junit.jar junit.textui.TestRunner Csv.LibCsvTest
+  - java -cp .:../../../junit.jar:./controller Csv.LibCsvTest
   - cd ../OPTIweb
   - java -cp ./bin/ MakeOPTIweb sujets2014_2015.csv etudiants2014_2015.csv intervenants2014_2015.csv projets2014_2015.csv
   - java -cp ./bin/ CsvToJson etudiants2014_2015.csv
