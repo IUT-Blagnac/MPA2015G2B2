@@ -1,6 +1,6 @@
 ﻿= Documentation SPRINT2
 :Author:  Groupe projet 2B2 
-:doctitle: Documentation Utilisateur du Projet MPA-M3301-G2B2
+:doctitle: Documentation Utilisateur du Projet OPTI MPA-M3301-G2B2
 :slideshowlocation: Your computer
 :copyright: {date={localdate}}, {slideshowlocation} *** {author} *** Powered by AsciiDoc and W3C Slidy &#169; 
 :revnumber: 3 ; Université Toulouse 2 - IUT de Blagnac - DUT Info S3/Module MPA - OPTI - SPRINT 3

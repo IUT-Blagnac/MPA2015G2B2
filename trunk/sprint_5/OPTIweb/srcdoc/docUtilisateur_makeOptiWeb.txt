@@ -1,4 +1,4 @@
-﻿= OPTIweb : Documentation Utilisateur
+﻿= OPTIweb : Documentation Utilisateur de makeOptiWeb
 :Author:  DUT/INFO/M3301
 :lang: fr
 
