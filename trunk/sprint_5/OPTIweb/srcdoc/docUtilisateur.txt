@@ -196,7 +196,6 @@ Pour rechercher un groupe particulier :
 
 . L'ensemble des étudiants du groupe saisi est alors fourni
 +
-image:images/searchEtudiantGroupeB400x600.png[]
 
 
 NOTE: Le Bouton image:images/backButton400x600.png[] permet de revenir à la Page d'Accueil de  l'application OPTIweb
