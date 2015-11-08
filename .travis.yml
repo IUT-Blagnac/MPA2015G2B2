@@ -29,7 +29,7 @@ script:
   - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/presentationFinale.html srcdoc/presentationFinale.txt
   - ls -alF srcdoc
   - cd bin
-  - java -cp .;../../junit.jar junit.textui.TestRunner Csv.LibCsvTest
+  - java -cp .;../../../junit.jar junit.textui.TestRunner Csv.LibCsvTest
   - cd ../OPTIweb
   - java -cp ./bin/ MakeOPTIweb sujets2014_2015.csv etudiants2014_2015.csv intervenants2014_2015.csv projets2014_2015.csv
   - java -cp ./bin/ CsvToJson etudiants2014_2015.csv
