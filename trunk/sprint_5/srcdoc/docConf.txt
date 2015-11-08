@@ -1,9 +1,9 @@
 //-------- directories -----------
 :icons: 
 // :iconsdir: /Users/thomas/dev/images/icons
-:imagesdir: ../srcdoc/images
+:imagesdir: ./images
 :src: ../src/
-:srcdoc: ../srcdoc/
+:srcdoc: ./
 //--------------------------------
 :coderay-css: style
 :data-uri!:
