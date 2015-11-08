@@ -32,9 +32,9 @@ script:
   - java -cp ./ Csv.mainCsv
   - java -cp .:../../../junit.jar:./controller Csv.LibCsvTest
   - cd ../OPTIweb/bin
-  - java -cp ./ MakeOPTIweb sujets2014_2015.csv etudiants2014_2015.csv intervenants2014_2015.csv projets2014_2015.csv
-  - java -cp ./ CsvToJson etudiants2014_2015.csv
-  - java -cp ./ CsvToJson intervenants2014_2015.csv
+  - java -cp ./ MakeOPTIweb ../sujets2014_2015.csv ../etudiants2014_2015.csv ../intervenants2014_2015.csv ../projets2014_2015.csv
+  - java -cp ./ CsvToJson ../etudiants2014_2015.csv
+  - java -cp ./ CsvToJson ../intervenants2014_2015.csv
   - java -cp .:../../../../junit.jar:./ MakeOPTIwebTest
   - cd test
   - cp OPTIwebprof.html /tmp/OPTIweb.html
