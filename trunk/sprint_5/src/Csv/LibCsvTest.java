@@ -7,7 +7,7 @@ import java.util.Random;
 
 public class LibCsvTest extends TestCase {
 	
-	private static final String testFilesPath = "../";
+	private static final String testFilesPath = "./";
 	// Mettre 	"./bin/" 	pour que les tests fonctionne sous Eclipse
 	// Mettre 	"./" 		pour que les tests lancés par le make.bat fonctionne
 	
