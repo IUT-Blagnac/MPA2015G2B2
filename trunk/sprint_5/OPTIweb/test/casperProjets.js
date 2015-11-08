@@ -2,7 +2,7 @@
 // casperjs test casperSujets.js [--capture=true] [--dump=true]
 
 var CAPTURE = true ;
-var REP_CAPTURE = "captures/" ;
+var REP_CAPTURE = "../doc/images/" ;
 var DUMP = false ;
 var REQUIRE = false ;
 var RESOLUTION = "";
