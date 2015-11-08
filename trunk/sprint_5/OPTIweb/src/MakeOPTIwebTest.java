@@ -19,7 +19,7 @@ public class MakeOPTIwebTest extends TestCase{
 	//@SuppressWarnings({ "resource", "unused" })
 	//@Test
 	public void test_existOrNot() throws Exception {
-		String fichier="OPTIweb.html";
+		String fichier="../OPTIweb.html";
 		BufferedReader In = null;
 		In = new BufferedReader(new FileReader(fichier));
 	}
