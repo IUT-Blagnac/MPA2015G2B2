@@ -46,8 +46,8 @@ script:
   - casperjs test casperAccueil.js
   - cd ../..
   - python ../../asciidoc-8.6.7/asciidoc.py -a data-uri -o doc/presentationFinale.html srcdoc/presentationFinale.txt
-  - python ../../asciidoc-8.6.7/asciidoc.py -a data-uri -o doc/Documentation_Utilisateur.html srcdoc/Documentation_Utilisateur.txt
-  - python ../../asciidoc-8.6.7/asciidoc.py -a data-uri -o doc/Documentation_Technique.html srcdoc/Documentation_Technique.txt
+  - python ../../asciidoc-8.6.7/asciidoc.py -a source-highlighter=pygments -o doc/Documentation_Utilisateur.html srcdoc/Documentation_Utilisateur.txt  
+  - python ../../asciidoc-8.6.7/asciidoc.py -a source-highlighter=pygments -o doc/Documentation_Technique.html srcdoc/Documentation_Technique.txt
   - cd OPTIweb
   - python ../../../asciidoc-8.6.7/asciidoc.py -a data-uri -o doc/docTechnique.html srcdoc/docTechnique.txt
   - python ../../../asciidoc-8.6.7/asciidoc.py -a data-uri -o doc/docTechnique_makeOptiWeb.html srcdoc/docTechnique_makeOptiWeb.txt
