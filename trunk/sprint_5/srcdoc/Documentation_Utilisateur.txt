@@ -39,7 +39,7 @@ A la fin de ce SPRINT, les fonctionnalités disponibles seront :
 L'interface se présente en plusieurs parties bien disctinctes, dont nous allons voir l'organisation ici.
 
 .Interface de l'application
-image::interface.png[link=interface.png,width=500]
+image::interface.png[link=images/interface.png,width=500]
 
 Après avoir ouvert l'application, vous pouvez effectuez plusieurs action de base présentez juste après.
 
