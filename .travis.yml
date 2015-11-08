@@ -25,7 +25,7 @@ script:
   - javac -cp .:./bin:../../../junit.jar -d ./bin ./src/CsvToJson.java
   - javac -cp .:./bin:../../../junit.jar -d ./bin ./src/MakeOPTIwebTest.java
   - cd ..
-  - java -jar ../plantuml.jar -Tpng -o srcdoc/images srcdoc/diag0.puml
+  - java -jar ../../plantuml.jar -Tpng -o srcdoc/images srcdoc/diag0.puml
   - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/presentationFinale.html srcdoc/presentationFinale.txt
   - ls -alF srcdoc
   - cd bin
@@ -44,3 +44,12 @@ script:
   - casperjs test casperProjets.js
   - casperjs test casperSujets.js
   - casperjs test casperAccueil.js
+  - cd ../..
+  - python ../../asciidoc-8.6.7/asciidoc.py -a data-uri -o doc/presentationFinale.html srcdoc/presentationFinale.txt
+  - python ../../asciidoc-8.6.7/asciidoc.py -a data-uri -o doc/Documentation_Utilisateur.html srcdoc/Documentation_Utilisateur.txt
+  - python ../../asciidoc-8.6.7/asciidoc.py -a data-uri -o doc/Documentation_Technique.html srcdoc/Documentation_Technique.txt
+  - cd OPTIweb
+  - python ../../../asciidoc-8.6.7/asciidoc.py -a data-uri -o doc/docTechnique.html srcdoc/docTechnique.txt
+  - python ../../../asciidoc-8.6.7/asciidoc.py -a data-uri -o doc/docTechnique_makeOptiWeb.html srcdoc/docTechnique_makeOptiWeb.txt
+  - python ../../../asciidoc-8.6.7/asciidoc.py -a data-uri -o doc/docUtilisateur.html srcdoc/docUtilisateur.txt
+  - python ../../../asciidoc-8.6.7/asciidoc.py -a data-uri -o doc/docUtilisateur_makeOptiWeb.html srcdoc/docUtilisateur_makeOptiWeb.txt
