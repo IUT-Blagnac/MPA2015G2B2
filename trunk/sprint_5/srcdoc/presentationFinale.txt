@@ -18,7 +18,6 @@ NOTE: On compte en moyenne 3mn par transparent
 
 == Second transparent
 
-image:./images/diag0.png[]
 
 NOTE: Plus que 8 slides
 
@@ -30,5 +29,4 @@ NOTE: Plus que 8 slides
 
 == Perspectives
 
-image:./images/sieste.png[]
 
