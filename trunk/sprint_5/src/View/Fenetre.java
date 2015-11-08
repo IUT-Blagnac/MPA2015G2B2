@@ -131,7 +131,7 @@ public class Fenetre extends JFrame{
     public void quitter() {
     	int confirmation;
     	confirmation = JOptionPane.showConfirmDialog(
-    		this, "Voulez-vous réellement quitter cette application ?", "Quitter ?",
+    		this, "Voulez-vous rÃ©ellement quitter cette application ?", "Quitter ?",
     		JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
     	if ( confirmation==JOptionPane.YES_OPTION ) {
     		System.exit(0);
@@ -140,10 +140,10 @@ public class Fenetre extends JFrame{
     
     public void about() {
     	
-    	JOptionPane.showMessageDialog(this, "Application de gestion de projets tutorés (nom : OPTI)\n\nUniversité Toulouse 2 - IUT de Blagnac - DUT Info S3/Module MPA \n\nListe des membres de l'équipe (Groupe 2B2) : \n"
+    	JOptionPane.showMessageDialog(this, "Application de gestion de projets tutorÃ©s (nom : OPTI)\n\nUniversitÃ© Toulouse 2 - IUT de Blagnac - DUT Info S3/Module MPA \n\nListe des membres de l'Ã©quipe (Groupe 2B2) : \n"
     			+ " - Jordan BROCARIO \n"
-    			+ " - Léo CALVIS \n"
-    			+ " - François-Marie D'ABOVILLE \n"
+    			+ " - LÃ©o CALVIS \n"
+    			+ " - FranÃ§ois-Marie D'ABOVILLE \n"
     			+ " - Thomas BONFILL \n"
     			+ " - Alexandre ERB \n"
     			+ " - Tim DAZAYOUS\n\n"

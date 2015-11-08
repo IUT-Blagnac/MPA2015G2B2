@@ -105,7 +105,7 @@ public class Controller implements ActionListener, MouseListener {
 	}
 	
 	private void creation_etudiant() {
-		CreerEtu fenetre = new CreerEtu(view,"Ajout d'un étudiant", this);
+		CreerEtu fenetre = new CreerEtu(view,"Ajout d'un Ã©tudiant", this);
 		fenetre.setLocationRelativeTo(view);
 		fenetre.setVisible(true);
 		fenetre.pack();
@@ -119,7 +119,7 @@ public class Controller implements ActionListener, MouseListener {
 	}
 	
 	public void modifier_etudiant(Etudiant e){
-		CreerEtu fenetre = new CreerEtu(view,"Modification d'un étudiant", this, e);
+		CreerEtu fenetre = new CreerEtu(view,"Modification d'un Ã©tudiant", this, e);
 		fenetre.setLocationRelativeTo(view);
 		fenetre.setVisible(true);
 		fenetre.pack();
@@ -156,7 +156,7 @@ public class Controller implements ActionListener, MouseListener {
 	}
 	
 	/**
-	 * Supprime le sujet selectionné de l'ArrayList ArraySujets
+	 * Supprime le sujet selectionnÃ© de l'ArrayList ArraySujets
 	 * 
 	 */
 	public void delSujet(Sujet s) {
@@ -167,7 +167,7 @@ public class Controller implements ActionListener, MouseListener {
 	
 	/**
 	 * 
-	 * Ouvre une fenêtre pour choisir un fichier csv à charger dans l'application
+	 * Ouvre une fenÃªtre pour choisir un fichier csv Ã  charger dans l'application
 	 * 
 	 */
 	private void ouvrirCsv(){
@@ -201,19 +201,19 @@ public class Controller implements ActionListener, MouseListener {
 	
 	/**
 	 * 
-	 * Créée une instance de la classe CreerSujet
+	 * CrÃ©Ã©e une instance de la classe CreerSujet
 	 * 
 	 */
 	public void creation_sujet() {
-		CreerSujet fenetre = new CreerSujet(view,"Création sujet", this);
+		CreerSujet fenetre = new CreerSujet(view,"CrÃ©ation sujet", this);
 		fenetre.setLocationRelativeTo(view);
 		fenetre.setVisible(true);
 		fenetre.pack();
 	}
 	
 	/**
-	 * Créée une instance de la classe CreerSujet
-	 * @param s Le sujet à modifier
+	 * CrÃ©Ã©e une instance de la classe CreerSujet
+	 * @param s Le sujet Ã  modifier
 	 * 
 	 */
 	public void modifier_sujet(Sujet s) {
@@ -225,7 +225,7 @@ public class Controller implements ActionListener, MouseListener {
 	
 	/**
 	 * 
-	 * @param s Sujet à modifier
+	 * @param s Sujet Ã  modifier
 	 * 			
 	 */
 	public void creationSujet(Sujet S) {

@@ -13,7 +13,7 @@ public class Etudiant extends Entity{
 	 * 
 	 * Permet de créer un Etudiant en donnant sont nom, son prénom, son groupe de td, de tp et son numéro de groupe
 	 *
-	 * @param id L'id de l'�tudiant
+	 * @param id L'id de l'étudiant
 	 * @param nom Nom de l'étudiant
 	 * @param prenom Prénom de l'étudiant
 	 * @param tp Groupe de TP de l'étudiant
@@ -32,7 +32,7 @@ public class Etudiant extends Entity{
 	 * 
 	 * Permet de créer un Etudiant en donnant sont nom, son prénom, son groupe de td et son groupee de tp.
 	 * 
-	 * @param id L'id de l'�tudiant
+	 * @param id L'id de l'étudiant
 	 * @param nom Nom de l'étudiant
 	 * @param prenom Prénom de l'étudiant
 	 * @param tp Groupe de TP de l'étudiant

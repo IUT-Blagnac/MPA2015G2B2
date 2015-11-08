@@ -63,8 +63,8 @@ public class mainCsv {
 		}
 		
 		ArrayList<String[]> dataTab3= new ArrayList<String []>();
-		String[][] tabSt3 = {	{ "prénom", "âge" },
-				{ "Cécile", "18 ans"}
+		String[][] tabSt3 = {	{ "prÃ©nom", "Ã¢ge" },
+				{ "CÃ©cile", "18 ans"}
 			};
 		for(int i=0;i<tabSt3.length;i++){
 			dataTab.add(tabSt3[i]);

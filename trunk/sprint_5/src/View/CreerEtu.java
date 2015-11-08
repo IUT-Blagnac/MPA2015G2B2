@@ -21,7 +21,7 @@ import Model.Etudiant;
 import Model.Sujet;
 
 /**
- * @author Sorény
+ * @author SorÃ©ny
  *
  */
 public class CreerEtu extends JDialog{

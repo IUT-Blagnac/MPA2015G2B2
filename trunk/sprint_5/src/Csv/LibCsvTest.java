@@ -9,7 +9,7 @@ public class LibCsvTest extends TestCase {
 	
 	private static final String testFilesPath = "../";
 	// Mettre 	"./bin/" 	pour que les tests fonctionne sous Eclipse
-	// Mettre 	"./" 		pour que les tests lancés par le make.bat fonctionne
+	// Mettre 	"./" 		pour que les tests lancÃ©s par le make.bat fonctionne
 	
 	public static void main(String[] args) {
 		junit.textui.TestRunner.run(new TestSuite(LibCsvTest.class));
@@ -61,7 +61,7 @@ public class LibCsvTest extends TestCase {
 				};
 				for(int i=0; i<arrayListRecuperee.size(); i++) {
 					for(int j=0; j<arrayListRecuperee.get(i).length; j++) {
-						assertEquals("Verification contenu retourné/attendu",donneesAttendues[i][j],arrayListRecuperee.get(i)[j]);
+						assertEquals("Verification contenu retournÃ©/attendu",donneesAttendues[i][j],arrayListRecuperee.get(i)[j]);
 					}
 				}
 			}
@@ -102,7 +102,7 @@ public class LibCsvTest extends TestCase {
 				};
 				for(int i=0; i<arrayListRecuperee.size(); i++) {
 					for(int j=0; j<arrayListRecuperee.get(i).length; j++) {
-						assertEquals("Verification contenu retourné/attendu",donneesAttendues[i][j],arrayListRecuperee.get(i)[j]);
+						assertEquals("Verification contenu retournÃ©/attendu",donneesAttendues[i][j],arrayListRecuperee.get(i)[j]);
 					}
 				}
 			}
@@ -117,7 +117,7 @@ public class LibCsvTest extends TestCase {
 		ArrayList<String[]> dataB= new ArrayList<String []>();
 		try { LibCsv.CSV_Write(dataB,"File"+randInt(100,999)+"ThatDoesntExist/fichier.csv" ); }
 		catch (Exception e) { exception = true ; };
-		assertTrue("Dossier inexistant ou de problème de droit d'écriture", exception);
+		assertTrue("Dossier inexistant ou de problÃ¨me de droit d'Ã©criture", exception);
 	}
 	
 	public void test_write_data_conform() {
@@ -125,8 +125,8 @@ public class LibCsvTest extends TestCase {
 		boolean contenu=true;
 		String concat="";
 		String[] tabStr= new String[2];
-		String[][] tabSt = {	{ "prénom", "âge" },
-								{ "Cécile", "18 ans"}
+		String[][] tabSt = {	{ "prÃ©nom", "Ã¢ge" },
+								{ "CÃ©cile", "18 ans"}
 							};
 		for(int i=0;i<tabSt.length;i++){
 			dataB.add(tabSt[i]);
@@ -149,12 +149,12 @@ public class LibCsvTest extends TestCase {
 		} catch (Exception e) {
 			System.out.println("Erreur --" + e);
 		};
-		String verif="prénom;âge\r\nCécile"+LibCsv.separator+"18 ans\r\n";
+		String verif="prÃ©nom;Ã¢ge\r\nCÃ©cile"+LibCsv.separator+"18 ans\r\n";
 		if(verif.equals(concat)){
 			contenu=false;
 		}
 		
-		assertTrue("Verification contenu écrit/fichier", contenu);
+		assertTrue("Verification contenu Ã©crit/fichier", contenu);
 	}
 	
 }

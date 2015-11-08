@@ -22,7 +22,7 @@ import Controller.Controller;
 import Model.Model;
 
 /**
- * @author Sorény
+ * @author SorÃ©ny
  *
  */
 public class PanelJList extends JPanel {
@@ -48,7 +48,7 @@ public class PanelJList extends JPanel {
 	 * 
 	 * @param ctrl Le controller
 	 * @param model Le modele
-	 * @param lt Le type de donnée que contient la liste (ListType)
+	 * @param lt Le type de donnÃ©e que contient la liste (ListType)
 	 */
 	public PanelJList(Controller ctrl, Model model, ListType lt) {
 		super();
