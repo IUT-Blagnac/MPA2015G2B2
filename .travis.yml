@@ -49,7 +49,7 @@ script:
   - python ../../asciidoc-8.6.7/asciidoc.py -a source-highlighter=pygments -o doc/Documentation_Utilisateur.html srcdoc/Documentation_Utilisateur.txt  
   - python ../../asciidoc-8.6.7/asciidoc.py -a source-highlighter=pygments -o doc/Documentation_Technique.html srcdoc/Documentation_Technique.txt
   - cd OPTIweb
-  - python ../../../asciidoc-8.6.7/asciidoc.py -a data-uri -o doc/docTechnique.html srcdoc/docTechnique.txt
+  - python ../../../asciidoc-8.6.7/asciidoc.py -a source-highlighter=pygments -o doc/docTechnique.html srcdoc/docTechnique.txt
   - python ../../../asciidoc-8.6.7/asciidoc.py -a data-uri -o doc/docTechnique_makeOptiWeb.html srcdoc/docTechnique_makeOptiWeb.txt
   - python ../../../asciidoc-8.6.7/asciidoc.py -a data-uri -o doc/docUtilisateur.html srcdoc/docUtilisateur.txt
   - python ../../../asciidoc-8.6.7/asciidoc.py -a data-uri -o doc/docUtilisateur_makeOptiWeb.html srcdoc/docUtilisateur_makeOptiWeb.txt
