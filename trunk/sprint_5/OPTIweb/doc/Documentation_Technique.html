@@ -1,10 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
     "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
 <meta name="generator" content="AsciiDoc 8.6.9" />
-<title>Documentation Technique du Projet MPA-M3301-G2B2</title>
+<title>Documentation Technique du Projet OptiWeb MPA-M3301-G2B2</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
 
@@ -795,7 +795,7 @@ asciidoc.install(2);
 </head>
 <body class="article">
 <div id="header">
-<h1>Documentation Technique du Projet MPA-M3301-G2B2</h1>
+<h1>Documentation Technique du Projet OptiWeb MPA-M3301-G2B2</h1>
 <span id="author">Groupe projet 2B2</span><br />
 <span id="revnumber">version 2 - Université Toulouse 2 - IUT de Blagnac - DUT Info S3/Module MPA - OPTI - SPRINT 4</span>
 <div id="toc">
@@ -1000,7 +1000,8 @@ Charger le fichier <em>OPTIweb.html</em> local dans un navigateur pour lancer l&
 <h2 id="_génération_du_fichier_em_optiweb_html_em">Génération du fichier <em>OPTIweb.html</em></h2>
 <div class="sectionbody">
 <div class="paragraph"><p>L&#8217;application de consultation <em>OPTIweb.html</em> est intégralement générée
-par le programme <em>MakeOPTIweb.java</em> qui à partir des fichiers csv (Sujets, Etudiants, Intervenants, Projets &#8230;) fabrique le fichier <em>OPTIweb.html</em>.</p></div>
+par le programme <em>MakeOPTIweb.java</em> qui à partir des fichiers csv (Sujets, Etudiants, Intervenants, Projets &#8230;) fabrique le fichier <em>OPTIweb.html</em>.
+Ce programme crée le fichier html en concaténant les balises du code html (sous forme de String) avec les valeurs des fichiers csv.</p></div>
 <div class="admonitionblock">
 <table><tr>
 <td class="icon">
@@ -1375,13 +1376,6 @@ Bouton de retour à la page d&#8217;accueil
 </div>
 </div>
 <div class="sect1">
-<h2 id="_makeoptiweb_génération_de_l_8217_application">MakeOPTIWeb : Génération de l&#8217;application</h2>
-<div class="sectionbody">
-<div class="paragraph"><p>L&#8217;application est générée à l&#8217;aide du programme MakeOptiWeb.hmtl.
-Ce programme crée le fichier html en concaténant les balises du code html (sous forme de String) avec les valeurs des fichiers csv.</p></div>
-</div>
-</div>
-<div class="sect1">
 <h2 id="_optiweb_test_casper">OPTIWeb : Test Casper</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>Casper permet de tester les différents aspect de l&#8217;application HTML :</p></div>
@@ -1435,7 +1429,7 @@ Les tests sont lancés à partir du fichier casperjs.bat qui est dans le reperto
 <div id="footer">
 <div id="footer-text">
 Version 2 - Université Toulouse 2 - IUT de Blagnac - DUT Info S3/Module MPA - OPTI - SPRINT 4<br />
-Dernière mise à jour 2015-10-20 18:09:54 Paris, Madrid (heure d’été)
+Dernière mise à jour 2015-11-08 21:53:32 Paris, Madrid
 </div>
 </div>
 </body>
