@@ -176,7 +176,7 @@ public class MakeOPTIweb {
 		
 		Writer html = null;
 		try {
-			html = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("OPTIweb.html"), "UTF-8"));
+			html = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("../OPTIweb.html"), "UTF-8"));
 		} catch (UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
