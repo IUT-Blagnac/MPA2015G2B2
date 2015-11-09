@@ -54,10 +54,6 @@ public class CreerSujet extends JDialog {
 		this.mod = true;
 		
 	}
-
-
-
-	
 	/**
 	 * @return
 	 */

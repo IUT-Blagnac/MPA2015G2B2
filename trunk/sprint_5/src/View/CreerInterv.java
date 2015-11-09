@@ -21,7 +21,7 @@ import Model.Etudiant;
 import Model.Intervenant;
 
 /**
- * @author SorÃ©ny
+ * @author Sorény
  *
  */
 public class CreerInterv extends JDialog{

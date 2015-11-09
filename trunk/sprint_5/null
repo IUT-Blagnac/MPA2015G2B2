@@ -1,0 +1,249 @@
+Loading source file javadoc\Model\Entity.java...
+Loading source file javadoc\Model\Etudiant.java...
+Loading source file javadoc\Model\Groupe.java...
+Loading source file javadoc\Model\Intervenant.java...
+Loading source file javadoc\Model\Model.java...
+Loading source file javadoc\Model\package-info.java...
+Loading source file javadoc\Model\Sujet.java...
+Loading source file javadoc\Controller\Controller.java...
+Loading source file javadoc\Controller\package-info.java...
+Loading source file javadoc\View\CreerEtu.java...
+Loading source file javadoc\View\CreerSujet.java...
+Loading source file javadoc\View\EtudiantOnglet.java...
+Loading source file javadoc\View\Fenetre.java...
+Loading source file javadoc\View\IntervenantOnglet.java...
+Loading source file javadoc\View\ListeSujet.java...
+Loading source file javadoc\View\package-info.java...
+Loading source file javadoc\View\PanelJList.java...
+Loading source file javadoc\View\SujetOnglet.java...
+Loading source file javadoc\View\SupprimerSujet.java...
+Loading source file javadoc\Csv\LibCsv.java...
+Loading source file javadoc\Csv\LibCsvTest.java...
+Loading source file javadoc\Csv\mainCsv.java...
+Loading source file javadoc\Csv\package-info.java...
+Constructing Javadoc information...
+javadoc\Csv\LibCsvTest.java:3: error: package junit.framework does not exist
+import junit.framework.*;
+^
+javadoc\Csv\LibCsvTest.java:13: error: cannot find symbol
+public class LibCsvTest extends TestCase {
+                                ^
+  symbol: class TestCase
+Standard Doclet version 1.8.0_60
+Building tree for all the packages and classes...
+Generating doc\Csv\LibCsv.html...
+javadoc\Csv\LibCsv.java:22: error: malformed HTML
+	 * Genere un fichier CSV a partir d'une ArrayList<String[]>
+	                                                 ^
+javadoc\Csv\LibCsv.java:22: error: bad use of '>'
+	 * Genere un fichier CSV a partir d'une ArrayList<String[]>
+	                                                          ^
+javadoc\Csv\LibCsv.java:26: warning: no description for @throws
+	 * @throws Exception 
+	   ^
+javadoc\Csv\LibCsv.java:42: error: malformed HTML
+	 * Lit et convertit un fichier CSV en ArrayList<String[]>
+	                                               ^
+javadoc\Csv\LibCsv.java:42: error: bad use of '>'
+	 * Lit et convertit un fichier CSV en ArrayList<String[]>
+	                                                        ^
+javadoc\Csv\LibCsv.java:46: warning: no description for @throws
+	 * @throws Exception 
+	   ^
+Generating doc\Csv\LibCsvTest.html...
+Generating doc\Csv\mainCsv.html...
+Generating doc\Model\Entity.html...
+Generating doc\Model\Etudiant.html...
+javadoc\Model\Etudiant.java:36: error: self-closing element not allowed
+	 * Constructeur paramétré <br/><br/>
+	                            ^
+javadoc\Model\Etudiant.java:36: error: self-closing element not allowed
+	 * Constructeur paramétré <br/><br/>
+	                                 ^
+javadoc\Model\Etudiant.java:43: error: @param name not found
+	 * @param tp Groupe de TP de l'étudiant
+	          ^
+javadoc\Model\Etudiant.java:44: error: @param name not found
+	 * @param td Groupe de TD de l'étudiant
+	          ^
+javadoc\Model\Etudiant.java:18: error: self-closing element not allowed
+	 * Constructeur paramétré <br/><br/>
+	                            ^
+javadoc\Model\Etudiant.java:18: error: self-closing element not allowed
+	 * Constructeur paramétré <br/><br/>
+	                                 ^
+javadoc\Model\Etudiant.java:24: error: @param name not found
+	 * @param tp Groupe de TP de l'étudiant
+	          ^
+javadoc\Model\Etudiant.java:25: error: @param name not found
+	 * @param td Groupe de TD de l'étudiant
+	          ^
+javadoc\Model\Etudiant.java:51: error: self-closing element not allowed
+	 * Constructeur paramétré <br/><br/>
+	                            ^
+javadoc\Model\Etudiant.java:51: error: self-closing element not allowed
+	 * Constructeur paramétré <br/><br/>
+	                                 ^
+javadoc\Model\Etudiant.java:57: error: @param name not found
+	 * @param tp Groupe de TP de l'étudiant
+	          ^
+javadoc\Model\Etudiant.java:58: error: @param name not found
+	 * @param td Groupe de TD de l'étudiant
+	          ^
+Generating doc\Model\Groupe.html...
+javadoc\Model\Groupe.java:148: error: unknown tag: Etudiant
+	 * @return ArrayList<Etudiant>(membres) Une ArrayList d'étudiant
+	                    ^
+javadoc\Model\Groupe.java:58: error: self-closing element not allowed
+	 * Constructeur paramétré : <br /> <br />
+	                              ^
+javadoc\Model\Groupe.java:58: error: self-closing element not allowed
+	 * Constructeur paramétré : <br /> <br />
+	                                     ^
+javadoc\Model\Groupe.java:61: error: @param name not found
+	 * @param etudiants ArrayList d'étudiant
+	          ^
+javadoc\Model\Groupe.java:64: warning: no @param for etudiant
+	public Groupe(ArrayList<Etudiant> etudiant, int numGroupe){
+	       ^
+javadoc\Model\Groupe.java:35: error: self-closing element not allowed
+	 * Constructeur paramétré : <br /> <br />
+	                              ^
+javadoc\Model\Groupe.java:35: error: self-closing element not allowed
+	 * Constructeur paramétré : <br /> <br />
+	                                     ^
+javadoc\Model\Groupe.java:47: error: self-closing element not allowed
+	 * Constructeur paramétré : <br /> <br />
+	                              ^
+javadoc\Model\Groupe.java:47: error: self-closing element not allowed
+	 * Constructeur paramétré : <br /> <br />
+	                                     ^
+javadoc\Model\Groupe.java:50: error: @param name not found
+	 * @param etudiants Tableau d'étudiant
+	          ^
+javadoc\Model\Groupe.java:53: warning: no @param for etudiant
+	public Groupe(Etudiant[] etudiant, int numGroupe){
+	       ^
+javadoc\Model\Groupe.java:19: error: self-closing element not allowed
+	 * Constructeur paramétré : <br /> <br />
+	                              ^
+javadoc\Model\Groupe.java:19: error: self-closing element not allowed
+	 * Constructeur paramétré : <br /> <br />
+	                                     ^
+javadoc\Model\Groupe.java:80: error: self-closing element not allowed
+	 * Constructeur paramétré : <br /> <br />
+	                              ^
+javadoc\Model\Groupe.java:80: error: self-closing element not allowed
+	 * Constructeur paramétré : <br /> <br />
+	                                     ^
+javadoc\Model\Groupe.java:69: error: self-closing element not allowed
+	 * Constructeur paramétré : <br /> <br />
+	                              ^
+javadoc\Model\Groupe.java:69: error: self-closing element not allowed
+	 * Constructeur paramétré : <br /> <br />
+	                                     ^
+Generating doc\Model\Intervenant.html...
+Generating doc\Model\Model.html...
+javadoc\Model\Model.java:87: error: unknown tag: Sujet
+		 * @return ArrayList<Sujet>(arraySujets) L'ArrayList de Sujet
+		                    ^
+javadoc\Model\Model.java:154: error: unknown tag: Groupe
+		 * @return ArrayList<Groupe>(arrayGroupes) L'ArrayList de groupe
+		                    ^
+javadoc\Model\Model.java:277: error: malformed HTML
+		 * @return ArrayList<>(arrayEtudiants) L'ArrayLisrt d'Etudiant
+		                    ^
+javadoc\Model\Model.java:277: error: bad use of '>'
+		 * @return ArrayList<>(arrayEtudiants) L'ArrayLisrt d'Etudiant
+		                     ^
+javadoc\Model\Model.java:301: error: unknown tag: Intervenant
+		 * @return ArrayList<Intervenant>(arrayInterv) L'ArrayList des intervenants
+		                    ^
+Generating doc\Model\Sujet.html...
+javadoc\Model\Sujet.java:19: error: self-closing element not allowed
+	 * Constructeur par d�faut : <br /> <br />
+	                             ^
+javadoc\Model\Sujet.java:19: error: self-closing element not allowed
+	 * Constructeur par d�faut : <br /> <br />
+	                                    ^
+javadoc\Model\Sujet.java:49: error: self-closing element not allowed
+	 * Constructeur param�tr� : <br /> <br />
+	                            ^
+javadoc\Model\Sujet.java:49: error: self-closing element not allowed
+	 * Constructeur param�tr� : <br /> <br />
+	                                   ^
+javadoc\Model\Sujet.java:35: error: self-closing element not allowed
+	 * Constructeur param�tr� : <br /> <br />
+	                            ^
+javadoc\Model\Sujet.java:35: error: self-closing element not allowed
+	 * Constructeur param�tr� : <br /> <br />
+	                                   ^
+Generating doc\Controller\Controller.html...
+javadoc\Controller\Controller.java:137: warning: no @param for s
+	public void delSujet(Sujet s) {
+	            ^
+javadoc\Controller\Controller.java:203: error: @param name not found
+	 * @param s Sujet � modifier
+	          ^
+javadoc\Controller\Controller.java:206: warning: no @param for S
+	public void creationSujet(Sujet S) {
+	            ^
+Generating doc\View\CreerEtu.html...
+javadoc\View\CreerEtu.java:36: error: self-closing element not allowed
+	 * Constructeur param�tr� <br /> <br />
+	                          ^
+javadoc\View\CreerEtu.java:36: error: self-closing element not allowed
+	 * Constructeur param�tr� <br /> <br />
+	                                 ^
+javadoc\View\CreerEtu.java:37: warning: no description for @param
+	 * @param mere
+	   ^
+javadoc\View\CreerEtu.java:38: warning: no description for @param
+	 * @param titre
+	   ^
+javadoc\View\CreerEtu.java:39: warning: no description for @param
+	 * @param c
+	   ^
+javadoc\View\CreerEtu.java:41: warning: no @param for e
+	public CreerEtu(JFrame mere, String titre, Controller c, Etudiant e){
+	       ^
+Generating doc\View\CreerSujet.html...
+javadoc\View\CreerSujet.java:67: warning: no description for @return
+	 * @return
+	   ^
+Generating doc\View\CreerSujet.EcouteurButton.html...
+Generating doc\View\EtudiantOnglet.html...
+Generating doc\View\Fenetre.html...
+Generating doc\View\IntervenantOnglet.html...
+Generating doc\View\ListeSujet.html...
+Generating doc\View\PanelJList.html...
+Generating doc\View\PanelJList.ListType.html...
+Generating doc\View\SujetOnglet.html...
+Generating doc\View\SupprimerSujet.html...
+Generating doc\overview-frame.html...
+Generating doc\Controller\package-frame.html...
+Generating doc\Controller\package-summary.html...
+Generating doc\Controller\package-tree.html...
+Generating doc\Csv\package-frame.html...
+Generating doc\Csv\package-summary.html...
+Generating doc\Csv\package-tree.html...
+Generating doc\Model\package-frame.html...
+Generating doc\Model\package-summary.html...
+Generating doc\Model\package-tree.html...
+Generating doc\View\package-frame.html...
+Generating doc\View\package-summary.html...
+Generating doc\View\package-tree.html...
+Generating doc\constant-values.html...
+Generating doc\serialized-form.html...
+Building index for all the packages and classes...
+Generating doc\overview-tree.html...
+Generating doc\index-all.html...
+Generating doc\deprecated-list.html...
+Building index for all classes...
+Generating doc\allclasses-frame.html...
+Generating doc\allclasses-noframe.html...
+Generating doc\index.html...
+Generating doc\overview-summary.html...
+Generating doc\help-doc.html...
+45 errors
+13 warnings

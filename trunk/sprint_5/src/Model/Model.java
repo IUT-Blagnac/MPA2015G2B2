@@ -1,6 +1,7 @@
 package Model;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import Controller.Controller;
 import View.Fenetre;
@@ -11,6 +12,7 @@ public class Model {
 		private ArrayList<Etudiant> arrayEtudiants;
 		private ArrayList<Groupe> arrayGroupes;
 		private ArrayList<Intervenant> arrayInterv;
+		private ArrayList<Projet> arrayProjets;
 		
 		private Controller ctrl;
 		private Fenetre view;
@@ -22,6 +24,7 @@ public class Model {
 			this.arrayEtudiants = new ArrayList<Etudiant>();
 			this.arrayGroupes = new ArrayList<Groupe>();
 			this.arrayInterv = new ArrayList<Intervenant>();
+			this.arrayProjets = new ArrayList<>();
 		}
 		
 		public void setView(Fenetre view){
@@ -64,28 +67,35 @@ public class Model {
 		
 		public void addSujet(Sujet s){
 			arraySujets.add(s);
+			for(int i=0; i<arrayGroupes.size(); i++)
+				arrayGroupes.get(i).addSujetInList(s);
 		}
 		
 		public void modifSujet(Sujet s){
 			for(int i=0; i<arraySujets.size(); i++){
-				if(arraySujets.get(i).getId() == s.getId())
-					arraySujets.set(i, s);
+				if(arraySujets.get(i).getId() == s.getId()){
+					Sujet p = arraySujets.get(i);
+					p.setAcronyme(s.getAcronyme());
+					p.setBesoins(s.getBesoins());
+					p.setContexte(s.getContexte());
+					p.setCorrespondant(s.getCorrespondant());
+					p.setOutils(s.getOutils());
+					p.setTitre(s.getTitre());
+				}
 			}
 		}
 		
-		public boolean removeSujet(int id){
+		public void removeSujet(int id){
 			Sujet s = getSujet(id);
-			System.out.println("trysuppres " + id);
 			if(s == null)
-				return false;
-			System.out.println("suppres " + id);
+				return;
 			arraySujets.remove(s);
-			for(int i=0; i<arrayGroupes.size(); i++)
-				if(arrayGroupes.get(i).getIdSujet() == s.getId()){
-					arrayGroupes.get(i).setIdSujet(0);
-					return true;
+			for(int i=0; i<arrayProjets.size(); i++){
+				if(arrayProjets.get(i).getSujet()==s){
+					arrayProjets.get(i).setSujet(null);
 				}
-			return false;
+				arrayGroupes.get(i).removeSujetInList(s);
+			}
 		}
 		
 		public Groupe getGroupe(int id){
@@ -95,16 +105,28 @@ public class Model {
 			return null;
 		}
 		
+		public Groupe getGroupe(char id){
+			int idI = (int) id;
+			idI-=64;
+			return getGroupe(idI);
+		}
+		
 		public ArrayList<Groupe> getArrayGroupe() {
 			return new ArrayList<Groupe>(arrayGroupes);
 		}
 
 		public void setArrayGroupe(ArrayList<Groupe> arrayGroupe) {
 			this.arrayGroupes = arrayGroupe;
+			for(int i=0; i<arrayGroupe.size(); i++)
+				for(int j=0; j<arraySujets.size(); j++)
+					this.arrayGroupes.get(i).addSujetInList(arraySujets.get(j));
 		}
 		
 		public void createGroupe(){
 			arrayGroupes.add(new Groupe(arrayGroupes.size()+1));
+			for(int i=0; i<arraySujets.size(); i++){
+				arrayGroupes.get(arrayGroupes.size()-1).addSujetInList(arraySujets.get(i));
+			}
 		}
 		
 		public void createGroupe(Etudiant[] etudiants){
@@ -114,34 +136,30 @@ public class Model {
 			arrayGroupes.add(new Groupe(etudiants, arrayGroupes.size()+1));
 		}
 		
-		public void removeGroupe(int numGroupe){
-			ArrayList<Etudiant> etus = arrayGroupes.get(numGroupe).getEtudiants();
+		public void removeGroupe(Groupe g){
+			ArrayList<Etudiant> etus = g.getEtudiants();
 			
 			for(int i=0; i<etus.size(); i++){
-				etus.get(i).setNumGroupe(0);
+				etus.get(i).setNumGroupe(-1);
 			}
-			arrayGroupes.remove(numGroupe);
+			arrayGroupes.remove(g);
 			
-			for(int i=numGroupe; i<arrayGroupes.size(); i++){
-				arrayGroupes.get(i).setNumGroupe(i);
+			for(int i=0; i<arrayGroupes.size(); i++){
+				arrayGroupes.get(i).setNumGroupe(i+1);
+			}
+			
+			for(int i=0; i<arrayProjets.size(); i++){
+				if(arrayProjets.get(i).getGrp() == g)
+					arrayProjets.get(i).setGrp(null);
 			}
 		}
-
-		public Groupe getGroupe(Sujet s){
-			for(int i=0; i<arrayGroupes.size(); i++)
-				if(arrayGroupes.get(i).getIdSujet() == s.getId()){
-					return arrayGroupes.get(i);
-				}
-			return null;
+		
+		public void setArrayEtudiants(ArrayList<Etudiant> array){
+			this.arrayEtudiants = array;
 		}
 		
 		public void addEtudiant(Etudiant e){
 			arrayEtudiants.add(e);
-		}
-		
-		public void addEtudiant(Etudiant e, Sujet s){
-			this.addEtudiant(e);
-			this.getGroupe(s).addEtudiant(e);
 		}
 		
 		public void addEtudiant(Etudiant e, int numGroupe){
@@ -151,6 +169,16 @@ public class Model {
 		
 		public int nbEtudiant(){
 			return arrayEtudiants.size();
+		}
+		
+		public Groupe etuIsGrouped(Etudiant e){
+			
+			for(int i=0; i<arrayGroupes.size(); i++){
+				if(arrayGroupes.get(i).getEtudiants().contains(e))
+					return arrayGroupes.get(i);
+			}
+			
+			return null;
 		}
 		
 		public Etudiant getEtudiant(int id){
@@ -196,11 +224,49 @@ public class Model {
 			this.arrayInterv = arrayInterv;
 		}
 		
+		public Intervenant getInterv(int id){
+			for(int i=0; i<arrayInterv.size(); i++){
+				if(arrayInterv.get(i).getId() == id)
+					return arrayInterv.get(i);
+			}
+			return null;
+		}
+		
 		public int getNextIdInterv(){
 			int nextId = 0;
 			if(arrayInterv.isEmpty())
 				return 1;
 			for(int i=0; i<arrayInterv.size(); i++){
+				if(arrayInterv.get(i).getId()!=++nextId)
+					return nextId;
+			}
+			
+			return ++nextId;
+		}
+
+		/**
+		 * @return the arrayProjets
+		 */
+		public ArrayList<Projet> getArrayProjets() {
+			return new ArrayList<Projet>(this.arrayProjets);
+		}
+
+		/**
+		 * @param arrayProjets the arrayProjets to set
+		 */
+		public void setArrayProjets(ArrayList<Projet> arrayProjets) {
+			this.arrayProjets = arrayProjets;
+		}
+		
+		public void addProjet(Projet p){
+			this.arrayProjets.add(p);
+		}
+		
+		public int getNextIdProjet(){
+			int nextId = 0;
+			if(arrayProjets.isEmpty())
+				return 1;
+			for(int i=0; i<arrayProjets.size(); i++){
 				if(arrayInterv.get(i).getId()!=++nextId)
 					return nextId;
 			}

@@ -45,6 +45,7 @@ public class Fenetre extends JFrame{
 	private SujetOnglet sujetO;
 	private EtudiantOnglet etudiantO;
 	private IntervenantOnglet intervenantO;
+	private ProjetOnglet projetO;
 	private Controller controller;
 	private Model model;
 	
@@ -57,6 +58,7 @@ public class Fenetre extends JFrame{
 		this.sujetO = new SujetOnglet(controller, model);
 		this.etudiantO = new EtudiantOnglet(controller, model);
 		this.intervenantO = new IntervenantOnglet(controller, model);
+		this.projetO = new ProjetOnglet(controller, model);
 		//	c.fill = GridBagConstraints.HORIZONTAL;
 	//	c.ipady = 0;  
 		
@@ -86,6 +88,7 @@ public class Fenetre extends JFrame{
 		panel.addTab("Sujets", sujetO);
 		panel.addTab("Etudiants", etudiantO);
 		panel.addTab("Intervenants", intervenantO);
+		panel.addTab("Projets", projetO);
 		
 		return panel;
 			
@@ -129,10 +132,10 @@ public class Fenetre extends JFrame{
     }
   
     public void quitter() {
-    	int confirmation;
-    	confirmation = JOptionPane.showConfirmDialog(
-    		this, "Voulez-vous rÃ©ellement quitter cette application ?", "Quitter ?",
-    		JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+    	int confirmation = 0;
+//    	confirmation = JOptionPane.showConfirmDialog(
+//    		this, "Voulez-vous réellement quitter cette application ?", "Quitter ?",
+//    		JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
     	if ( confirmation==JOptionPane.YES_OPTION ) {
     		System.exit(0);
     	}
@@ -140,10 +143,10 @@ public class Fenetre extends JFrame{
     
     public void about() {
     	
-    	JOptionPane.showMessageDialog(this, "Application de gestion de projets tutorÃ©s (nom : OPTI)\n\nUniversitÃ© Toulouse 2 - IUT de Blagnac - DUT Info S3/Module MPA \n\nListe des membres de l'Ã©quipe (Groupe 2B2) : \n"
+    	JOptionPane.showMessageDialog(this, "Application de gestion de projets tutorés (nom : OPTI)\n\nUniversité Toulouse 2 - IUT de Blagnac - DUT Info S3/Module MPA \n\nListe des membres de l'équipe (Groupe 2B2) : \n"
     			+ " - Jordan BROCARIO \n"
-    			+ " - LÃ©o CALVIS \n"
-    			+ " - FranÃ§ois-Marie D'ABOVILLE \n"
+    			+ " - Léo CALVIS \n"
+    			+ " - François-Marie D'ABOVILLE \n"
     			+ " - Thomas BONFILL \n"
     			+ " - Alexandre ERB \n"
     			+ " - Tim DAZAYOUS\n\n"

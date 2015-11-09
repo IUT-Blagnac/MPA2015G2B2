@@ -4,15 +4,19 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.io.File;
 import java.util.ArrayList;
 
 import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 
 import Csv.LibCsv;
+import Model.Entity;
 import Model.Etudiant;
 import Model.Groupe;
 import Model.Intervenant;
 import Model.Model;
+import Model.Projet;
 import Model.Sujet;
 import View.CreerEtu;
 import View.CreerInterv;
@@ -23,9 +27,6 @@ public class Controller implements ActionListener, MouseListener {
 	
 	private Model model;
 	private Fenetre view;
-	
-	private JFileChooser dialogue = new JFileChooser();
-	private ArrayList<String[]> arrayTemp = new ArrayList<String[]>();
 	
 	public Controller() {
 		this.model = new Model(this);
@@ -82,6 +83,9 @@ public class Controller implements ActionListener, MouseListener {
 		case "addINTERVENANT":
 			this.creation_intervenant();
 			break;
+		case "addPROJET":
+			this.model.addProjet(new Projet(model.getNextIdProjet()));
+			break;
 		case "about":
 			view.about();
 			break;
@@ -99,8 +103,19 @@ public class Controller implements ActionListener, MouseListener {
 	}
 	
 	public void addEtudiantsInGroupe(Etudiant e, Groupe g){
-		if(!g.getEtudiants().contains(e))
-			g.addEtudiant(e);
+		if(!g.getEtudiants().contains(e)){
+			Groupe grp = model.etuIsGrouped(e);
+			if(grp!=null){
+				int rep = JOptionPane.showConfirmDialog(view, "L'étudiant est déja assigné à un groupe voulez-vous le changer de groupe ?", "Etudiant déjà groupé", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+				if(rep == 0){
+					grp.removeEtudiant(e);
+					g.addEtudiant(e);
+				}
+				
+			}else
+				g.addEtudiant(e);
+		}else
+			JOptionPane.showConfirmDialog(view, "Etudiant déjà présent dans le groupe", "Déjà present", JOptionPane.CLOSED_OPTION, JOptionPane.ERROR_MESSAGE);
 		view.repaint();
 	}
 	
@@ -165,20 +180,30 @@ public class Controller implements ActionListener, MouseListener {
 				
 	}
 	
+	public void delGrp(Groupe g){
+		model.removeGroupe(g);
+		view.revalidate();
+		view.repaint();
+	}
+	
+	public void retireEtu(Etudiant e){
+		model.getGroupe(e.getNumGroupe()).removeEtudiant(e);
+		view.revalidate();
+		view.repaint();
+	}
+	
 	/**
 	 * 
 	 * Ouvre une fenêtre pour choisir un fichier csv à charger dans l'application
 	 * 
 	 */
 	private void ouvrirCsv(){
-		//JFileChooser dialogue = new JFileChooser();
+		JFileChooser dialogue = new JFileChooser();
         int  returnVal = dialogue.showOpenDialog(view);
-         // ArrayList<String[]> arrayTemp = new ArrayList<String[]>();
           try {
           	if(returnVal == JFileChooser.APPROVE_OPTION) {
-          		arrayTemp = LibCsv.CSV_Read(dialogue.getSelectedFile().toString());
-          		model.setArraySujets(LibCsv.translateArray(arrayTemp));
-          		System.out.println(model.getArraySujets());
+          		ArrayList<String[]> arrayTemp = LibCsv.CSV_Read(dialogue.getSelectedFile().toString());
+          		model.setArraySujets(LibCsv.translateArraySujet(arrayTemp));
           	}
 				 
           }catch (Exception e) {
@@ -187,10 +212,90 @@ public class Controller implements ActionListener, MouseListener {
 			}
 	}
 	
+	private void ouvrirProjetCsv(String path){
+		try {
+			ArrayList<String[]> arrayString = LibCsv.CSV_Read(path);
+			ArrayList<Projet> projs = new ArrayList<>();
+			
+			for(int i=1; i<arrayString.size(); i++){
+				int size = arrayString.get(i).length;
+				Groupe g = null;
+				Sujet s = null;
+				Intervenant client = null;
+				Intervenant supervis = null;
+				Intervenant support = null;
+				
+				if(size>1)
+					g = model.getGroupe(arrayString.get(i)[1].charAt(0));
+				if(size>2)
+					s = model.getSujet(Integer.parseInt(arrayString.get(i)[2]));
+				if(size>3)
+					client = model.getInterv(Integer.parseInt(arrayString.get(i)[3]));
+				if(size>4)
+					supervis = model.getInterv(Integer.parseInt(arrayString.get(i)[4]));
+				if(size>5)
+					support = model.getInterv(Integer.parseInt(arrayString.get(i)[5]));
+				projs.add(new Projet(Integer.parseInt(arrayString.get(i)[0]), s, g, client, supervis, support));
+			}
+			
+			model.setArrayProjets(projs);
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+	
+	private void initData(){
+		File f = new File("sujets2014_2015.csv");
+		if(f.exists())
+		try {
+			ArrayList<String[]> arrayTemp = LibCsv.CSV_Read("sujets2014_2015.csv");
+			model.setArraySujets(LibCsv.translateArraySujet(arrayTemp));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		f = new File("etudiants2014_2015.csv");
+		if(f.exists())
+		try {
+			ArrayList<String[]> arrayTemp = LibCsv.CSV_Read("etudiants2014_2015.csv");
+			ArrayList<ArrayList<? extends Entity>> array = LibCsv.translateArrayEtudiant((arrayTemp));
+			@SuppressWarnings("unchecked")
+			ArrayList<Etudiant> etus = (ArrayList<Etudiant>)array.get(0);
+			@SuppressWarnings("unchecked")
+			ArrayList<Groupe> grps = (ArrayList<Groupe>)array.get(1);
+			model.setArrayEtudiants(etus);
+			model.setArrayGroupe(grps);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		f = new File("intervenants2014_2015.csv");
+		if(f.exists())
+		try {
+			ArrayList<String[]> arrayTemp = LibCsv.CSV_Read("intervenants2014_2015.csv");
+			model.setArrayInterv(LibCsv.translateArrayInterv(arrayTemp));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		f = new File("projets2014_2015.csv");
+		if(f.exists())
+		ouvrirProjetCsv("projets2014_2015.csv");
+  		
+	}
+	
 	private void sauvegarderCsv(){
 		try {
-			
-				arrayTemp = LibCsv.CSV_Read(dialogue.getSelectedFile().toString());
+			JFileChooser dialogue = new JFileChooser();
+			@SuppressWarnings("unused")
+			ArrayList<String[]> arrayTemp = LibCsv.CSV_Read(dialogue.getSelectedFile().toString());
 			
 				LibCsv.CSV_Write(LibCsv.translateArraySujetToString(model.getArraySujets()), "test.csv");
 			System.out.println("test");
@@ -239,13 +344,17 @@ public class Controller implements ActionListener, MouseListener {
 		view.repaint();
 	}
 	
-	public void creer_Etudiant(Etudiant e){
-		//CreerEtu fenetre = new creerEtu
+	public void grpVoeu(Groupe g, Sujet s, int v){
+		if(g.getSujet(v) != null)
+			g.setVoeu(g.getSujet(v), 0);	
+		g.setVoeu(s, v);
+			
 	}
 	
 	
 	public static void main(String[] sapin){
-		new Controller();
+		Controller c = new Controller();
+		c.initData();
 	}
 	
 

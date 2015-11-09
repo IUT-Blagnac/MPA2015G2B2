@@ -11,12 +11,12 @@ public class Sujet extends Entity{
 	
 	public Sujet() {
 		
-		acronyme = "IndÃ©fini";
-		titre = "IndÃ©fini";
-		contexte  = "IndÃ©fini";
-		besoins = "IndÃ©fini";
-		outils = "IndÃ©fini";
-		correspondant = "IndÃ©fini";
+		acronyme = "Indéfini";
+		titre = "Indéfini";
+		contexte  = "Indéfini";
+		besoins = "Indéfini";
+		outils = "Indéfini";
+		correspondant = "Indéfini";
 	
 		
 	}

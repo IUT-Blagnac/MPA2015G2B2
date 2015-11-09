@@ -8,6 +8,10 @@ import java.io.FileWriter;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 
+import Model.Entity;
+import Model.Etudiant;
+import Model.Groupe;
+import Model.Intervenant;
 import Model.Sujet;
 
 public class LibCsv {
@@ -58,12 +62,12 @@ public class LibCsv {
 	 * @param array Une ArrayList de String[]
 	 * @return goodArray Une ArrayList de Sujet
 	 */
-	public static  ArrayList<Sujet> translateArray( ArrayList<String[]> array) {
+	public static  ArrayList<Sujet> translateArraySujet( ArrayList<String[]> array) {
 		
 		 ArrayList<Sujet> goodArray = new ArrayList<Sujet>();
 		 int id = 0;
-		 String acronyme = null;
-		 String titre = null;
+		 String acronyme = "";
+		 String titre = "";
 		 String contexte = "";
 		 String besoins = "";
 		 String outils = "";
@@ -103,6 +107,62 @@ public class LibCsv {
 		return goodArray;
 		
 	}
+	
+	/**
+	 * Transforme une ArrayList de String[] en ArrayList de Etudiants et ArrayList de Groupes
+	 * @param array Une ArrayList de String[]
+	 * @return goodArray une ArrayList d'Etudiant et une ArrayList de Groupe dans une ArrayList
+	 */
+	public static  ArrayList<ArrayList<? extends Entity>> translateArrayEtudiant( ArrayList<String[]> array) {
+		
+		ArrayList<Etudiant> etus = new ArrayList<>(array.size());
+		ArrayList<Groupe> grps = new ArrayList<>();
+		Groupe grp = null;
+		String idGP = array.get(1)[0], idGN = "";
+		if(!idGP.equals("")){
+			grp = new Groupe(1);
+			grps.add(grp);
+		}
+		int idG = 1;
+		
+		
+		for(int i=1; i<array.size(); i++){
+			idGN = array.get(i)[0];
+			Etudiant etu = new Etudiant(Integer.parseInt(array.get(i)[1]), array.get(i)[2], array.get(i)[3]);
+			etus.add(etu);
+			if(idGP.equals(idGN) && !idGN.equals(""))
+				grp.addEtudiant(etu);
+			else
+				if(!idGN.equals("")){
+					grp = new Groupe(++idG);
+					grp.addEtudiant(etu);
+					grps.add(grp);
+				}
+			idGP = idGN;
+		}
+		
+		ArrayList<ArrayList<? extends Entity>> a = new ArrayList<>();
+		a.add(etus);
+		a.add(grps);
+		
+		return a;
+	}
+	
+	/**
+	 * Transforme une ArrayList de String[] en ArrayList d'Intervenant
+	 * @param array Une ArrayList de String[]
+	 * @return goodArray une ArrayList d'Intervenants
+	 */
+	public static  ArrayList<Intervenant> translateArrayInterv( ArrayList<String[]> array) {
+		ArrayList<Intervenant> intervs = new ArrayList<>();
+		
+		for(int i=1; i<array.size(); i++)
+			intervs.add(new Intervenant(Integer.parseInt(array.get(i)[0]), array.get(i)[1], array.get(i)[2]));
+		
+		return intervs;
+	}
+	
+	
 	
 	public static  ArrayList<String[]> translateArraySujetToString( ArrayList<Sujet> array) {
 		

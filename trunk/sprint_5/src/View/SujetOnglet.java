@@ -2,6 +2,7 @@ package View;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -129,6 +130,8 @@ public class SujetOnglet extends JPanel {
 		this.add(sujets_west,BorderLayout.WEST);
 		this.add(sujets_east,BorderLayout.CENTER);
 		sujets_west.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createEtchedBorder(), BorderFactory.createEmptyBorder(2, 3, 2, 4)));
+		panelList.setPreferredSize(new Dimension(200, 10));
+		panelList.setResearch(true);
 	}
 	
 	public void initList(){
