@@ -1,32 +1,36 @@
-﻿= MPA : Présentation finale de recette MPAstaff
-:Author:  DUT/INFO/M3301
+﻿= OPTI : Bilan Global - Projet OPTIWeb
+:Author:  Groupe projet 2B2
+:doctitle: Bilan Technique OPTI
 :lang: fr
-:slideshowlocation: Your computer
-:copyright: {date={localdate}}, {slideshowlocation} *** {author} *** Powered by AsciiDoc and W3C Slidy &#169; 
-:duration: 30
-:incremental: 1
 
-== Premier transparent
+== Fiche projet - SPRINT 5
 
-A vous ...
+[icon="../../images/UT2JJ128.png"]
+[TIP]
+====
+Membres de l'équipe : Léo Calvis, François-Marie d'Aboville, Thomas Bonfill, Jordan Brocario, Tim Dazayous et Alexandre Erb
 
--  item 1
--  item 2
--  item 3
+*Université Toulouse 2 - IUT de Blagnac*
 
-NOTE: On compte en moyenne 3mn par transparent
+Formation:: DUT INFO S3/Module MPA
+Projet:: OPTI/OPTIweb
+====
 
-== Second transparent
+== Les choix techniques
 
-
-NOTE: Plus que 8 slides
-
-
-== Troisième transparent
-
-----
-----
-
-== Perspectives
+- Utilisation de Java pour coder notre application.
+- Organiser le code en MVC.
+- Lire les fichiers CSV et les convertir en ArrayList<String[]> pour qu'ils soit exploitable.
+- Utilisation d'outils de travail en groupe : Github, AsciiDoc, CasperJS, TravisJS, Redmine, la méthode agile SCRUM.
 
 
+== Efficacité de l'équipe
+
+- Beaucoup de personne sur la documentation, peux de personnes performante en codage MVC.
+- Perte de temps sur la compréhension des attentes du client.
+- Difficulté a faire tout le sprint en une seule journée.
+
+== Solution à apporter
+
+- Mieux répartir le travail entre les différents membres de l'équipe.
+- Avoir plus de temps en cour pour devellopper l'application principale.
