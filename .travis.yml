@@ -53,3 +53,7 @@ script:
   - python ../../../asciidoc-8.6.7/asciidoc.py -a data-uri -o doc/docTechnique_makeOptiWeb.html srcdoc/docTechnique_makeOptiWeb.txt
   - python ../../../asciidoc-8.6.7/asciidoc.py -a data-uri -o doc/docUtilisateur.html srcdoc/docUtilisateur.txt
   - python ../../../asciidoc-8.6.7/asciidoc.py -a data-uri -o doc/docUtilisateur_makeOptiWeb.html srcdoc/docUtilisateur_makeOptiWeb.txt
+  - ls -alF .
+  - ls -alF doc
+  - ls -alF ..
+  - ls -alf ../doc
