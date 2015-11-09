@@ -32,7 +32,7 @@ public class IntervenantOnglet extends JPanel {
 			this.setLayout(new BorderLayout());
 			intervenant_west = new JPanel(new BorderLayout());
 			intervenant_east = new JPanel(new BorderLayout());
-			JButton creerIntervenant = new JButton("Créer un intervenant");
+			JButton creerIntervenant = new JButton("CrÃ©er un intervenant");
 			JButton supprimerIntervenant = new JButton("Supprimer un intervenant");
 			creerIntervenant.setActionCommand("creerIntervenant");
 			creerIntervenant.addActionListener(ctrl);

@@ -26,7 +26,7 @@ import Model.Sujet;
 import View.PanelJList.ListType;
 
 /**
- * @author Sorény
+ * @author SorÃ©ny
  *
  */
 public class ProjetOnglet extends JPanel {

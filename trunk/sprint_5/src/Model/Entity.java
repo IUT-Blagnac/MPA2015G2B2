@@ -4,7 +4,7 @@
 package Model;
 
 /**
- * @author Sorény
+ * @author SorÃ©ny
  *
  */
 public abstract class Entity {

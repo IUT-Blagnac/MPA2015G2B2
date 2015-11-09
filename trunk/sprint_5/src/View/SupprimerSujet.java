@@ -21,7 +21,7 @@ import Model.Sujet;
 public class SupprimerSujet extends JDialog {
 	
 	private static final String testFilesPath = "./";
-	private JLabel label = new JLabel("Id du sujet à supprimer : ");
+	private JLabel label = new JLabel("Id du sujet Ã  supprimer : ");
 	private JButton annuler = new JButton("Annuler");
 	private JButton valider = new JButton("Valider");
 	private String[] tabSujets;

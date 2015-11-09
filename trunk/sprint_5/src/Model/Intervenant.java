@@ -4,7 +4,7 @@
 package Model;
 
 /**
- * @author Sorény
+ * @author SorÃ©ny
  *
  */
 public class Intervenant extends Entity{

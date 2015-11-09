@@ -4,7 +4,7 @@
 package Model;
 
 /**
- * @author Sorény
+ * @author SorÃ©ny
  *
  */
 public class Projet extends Entity {
@@ -111,7 +111,7 @@ public class Projet extends Entity {
 			return s;
 		}
 		
-		return "Projet n°" + getId();
+		return "Projet nÂ°" + getId();
 	}
 	
 }

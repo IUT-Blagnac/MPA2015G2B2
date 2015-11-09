@@ -9,16 +9,16 @@ public class Etudiant extends Entity{
 		
 		
 		/**
-	 * Constructeur paramétré <br/><br/>
+	 * Constructeur paramÃ©trÃ© <br/><br/>
 	 * 
-	 * Permet de créer un Etudiant en donnant sont nom, son prénom, son groupe de td, de tp et son numéro de groupe
+	 * Permet de crÃ©er un Etudiant en donnant sont nom, son prÃ©nom, son groupe de td, de tp et son numÃ©ro de groupe
 	 *
-	 * @param id L'id de l'étudiant
-	 * @param nom Nom de l'étudiant
-	 * @param prenom Prénom de l'étudiant
-	 * @param tp Groupe de TP de l'étudiant
-	 * @param td Groupe de TD de l'étudiant
-	 * @param numG Numéro du groupe  de l'étudiant
+	 * @param id L'id de l'Ã©tudiant
+	 * @param nom Nom de l'Ã©tudiant
+	 * @param prenom PrÃ©nom de l'Ã©tudiant
+	 * @param tp Groupe de TP de l'Ã©tudiant
+	 * @param td Groupe de TD de l'Ã©tudiant
+	 * @param numG NumÃ©ro du groupe  de l'Ã©tudiant
 	 */
 	public Etudiant(int id, String nom, String prenom,int numG){
 		this.setId(id);
@@ -28,65 +28,65 @@ public class Etudiant extends Entity{
 	}
 	
 	/**
-	 * Constructeur paramétré <br/><br/>
+	 * Constructeur paramÃ©trÃ© <br/><br/>
 	 * 
-	 * Permet de créer un Etudiant en donnant sont nom, son prénom, son groupe de td et son groupee de tp.
+	 * Permet de crÃ©er un Etudiant en donnant sont nom, son prÃ©nom, son groupe de td et son groupee de tp.
 	 * 
-	 * @param id L'id de l'étudiant
-	 * @param nom Nom de l'étudiant
-	 * @param prenom Prénom de l'étudiant
-	 * @param tp Groupe de TP de l'étudiant
-	 * @param td Groupe de TD de l'étudiant
+	 * @param id L'id de l'Ã©tudiant
+	 * @param nom Nom de l'Ã©tudiant
+	 * @param prenom PrÃ©nom de l'Ã©tudiant
+	 * @param tp Groupe de TP de l'Ã©tudiant
+	 * @param td Groupe de TD de l'Ã©tudiant
 	 */
 	public Etudiant(int id, String nom, String prenom) {
 		this(id, nom, prenom, -1);
 	}
 	
 	/**
-	 * Constructeur paramétré <br/><br/>
+	 * Constructeur paramÃ©trÃ© <br/><br/>
 	 * 
-	 * Permet de créer un Etudiant en donnant sont nom, son prénom, son groupe de td et son groupee de tp.
+	 * Permet de crÃ©er un Etudiant en donnant sont nom, son prÃ©nom, son groupe de td et son groupee de tp.
 	 * 
-	 * @param nom Nom de l'étudiant
-	 * @param prenom Prénom de l'étudiant
-	 * @param tp Groupe de TP de l'étudiant
-	 * @param td Groupe de TD de l'étudiant
+	 * @param nom Nom de l'Ã©tudiant
+	 * @param prenom PrÃ©nom de l'Ã©tudiant
+	 * @param tp Groupe de TP de l'Ã©tudiant
+	 * @param td Groupe de TD de l'Ã©tudiant
 	 */
 	public Etudiant(String nom, String prenom) {
 		this(0, nom, prenom, -1);
 	}
 
 	/**
-	 * Permet d'obtenir le nom de l'étudiant 
+	 * Permet d'obtenir le nom de l'Ã©tudiant 
 	 * @return nom
-	 * 				le nom de l'étudiant
+	 * 				le nom de l'Ã©tudiant
 	 */
 	public String getNom() {
 		return nom;
 	}
 
 		/**
-	 * Permet de modifier le nom de l'étudiant 
+	 * Permet de modifier le nom de l'Ã©tudiant 
 	 * @param nom
-	 * 				le nom de l'étudiant
+	 * 				le nom de l'Ã©tudiant
 	 */
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
 
 		/**
-	 * Permet d'obtenir le prénom de l'étudiant 
+	 * Permet d'obtenir le prÃ©nom de l'Ã©tudiant 
 	 * @return prenom
-	 * 				le prénom de l'étudiant
+	 * 				le prÃ©nom de l'Ã©tudiant
 	 */
 	public String getPrenom() {
 		return prenom;
 	}
 
 		/**
-	 * Permet de modifier le prénom de l'étudiant 
+	 * Permet de modifier le prÃ©nom de l'Ã©tudiant 
 	 * @param prenom
-	 * 				le prénom de l'étudiant
+	 * 				le prÃ©nom de l'Ã©tudiant
 	 */
 	public void setPrenom(String prenom) {
 		this.prenom = prenom;
@@ -94,9 +94,9 @@ public class Etudiant extends Entity{
 	
 		/**
 	 * 
-	 *Permet d'obtenir le numéro de TP de l'étudiant
+	 *Permet d'obtenir le numÃ©ro de TP de l'Ã©tudiant
 	 * @return tp
-	 * 			Le numéro de tp de l'étudiant
+	 * 			Le numÃ©ro de tp de l'Ã©tudiant
 	 */
 	public char getTp() {
 		return tp;
@@ -104,18 +104,18 @@ public class Etudiant extends Entity{
 
 		/**
 	 * 
-	 *Permet de modifier le numéro de TP de l'étudiant
+	 *Permet de modifier le numÃ©ro de TP de l'Ã©tudiant
 	 * @param tp
-	 * 			Le numéro de tp de l'étudiant(int)
+	 * 			Le numÃ©ro de tp de l'Ã©tudiant(int)
 	 */
 	public void setTp(char tp) {
 		this.tp = tp;
 	}
 		/**
 	 * 
-	 *Permet de modifier le numéro de TP de l'étudiant
+	 *Permet de modifier le numÃ©ro de TP de l'Ã©tudiant
 	 * @param tp
-	 * 			Le numéro de tp de l'étudiant(String)
+	 * 			Le numÃ©ro de tp de l'Ã©tudiant(String)
 	 */
 	public void setTp(String tp) {
 		this.tp = tp.charAt(0);
@@ -123,9 +123,9 @@ public class Etudiant extends Entity{
 
 		/**
 	 * 
-	 * Permet d'obtenir le numéro de TD de l'étudiant
+	 * Permet d'obtenir le numÃ©ro de TD de l'Ã©tudiant
 	 * @return td
-	 * 				Le numéro de TD de l'étudiant
+	 * 				Le numÃ©ro de TD de l'Ã©tudiant
 	 */
 	public int getTd() {
 		return td;
@@ -133,27 +133,27 @@ public class Etudiant extends Entity{
 
 		/**
 	 * 
-	 * Permet de modifier le numéro de TD de l'étudiant
+	 * Permet de modifier le numÃ©ro de TD de l'Ã©tudiant
 	 * @param td
-	 * 				Le numéro de TD de l'étudiant
+	 * 				Le numÃ©ro de TD de l'Ã©tudiant
 	 */
 	public void setTd(int td) {
 		this.td = (byte) td;
 	}
 
 	/**
-	 * Permet d'obtenir le numéro du groupe de l'étudiant
+	 * Permet d'obtenir le numÃ©ro du groupe de l'Ã©tudiant
 	 * @return numGroupe
-	 * 					le numéro du groupe de l'étudiant
+	 * 					le numÃ©ro du groupe de l'Ã©tudiant
 	 */
 	public int getNumGroupe() {
 		return numGroupe;
 	}
 
 	/**
-	 * Permet de modifier le numéro du groupe de l'étudiant
+	 * Permet de modifier le numÃ©ro du groupe de l'Ã©tudiant
 	 * @param numGroupe
-	 * 					le numéro du groupe de l'étudiant
+	 * 					le numÃ©ro du groupe de l'Ã©tudiant
 	 */
 	public void setNumGroupe(int numGroupe) {
 		this.numGroupe = numGroupe;

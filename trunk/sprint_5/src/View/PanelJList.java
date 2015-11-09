@@ -34,7 +34,7 @@ import Model.Model;
 import Model.Sujet;
 
 /**
- * @author Sorény
+ * @author SorÃ©ny
  *
  */
 public class PanelJList extends JPanel {
@@ -65,7 +65,7 @@ public class PanelJList extends JPanel {
 	 * 
 	 * @param ctrl Le controller
 	 * @param model Le modele
-	 * @param lt Le type de donnée que contient la liste (ListType)
+	 * @param lt Le type de donnÃ©e que contient la liste (ListType)
 	 */
 	public PanelJList(Controller ctrl, Model model, ListType lt) {
 		super();
@@ -183,7 +183,7 @@ public class PanelJList extends JPanel {
 			listNoAff.setBorder(BorderFactory.createLoweredBevelBorder());
 			onglet = new JTabbedPane();
 			onglet.add("Tous", scrollList);
-			onglet.add("Non-affecté", scrollListN);
+			onglet.add("Non-affectÃ©", scrollListN);
 			this.add(onglet, BorderLayout.CENTER);
 		}else
 			this.add(scrollList, BorderLayout.CENTER);
