@@ -42,6 +42,7 @@ echo on
 python %ASCIIDOCDIR%asciidoc.py -a source-highlighter=pygments -o %DOCDIR%Documentation_Utilisateur.html %SRCDOCDIR%Documentation_Utilisateur.txt
 
 python %ASCIIDOCDIR%asciidoc.py -a source-highlighter=pygments -o %DOCDIR%Documentation_Technique.html %SRCDOCDIR%Documentation_Technique.txt
+python %ASCIIDOCDIR%asciidoc.py --backend slidy -a source-highlighter=pygments -o %DOCDIR%presentationFinale.html %SRCDOCDIR%presentationFinale.txt
 
 @echo javadoc -d doc %JAVADOCDIR%Model\*.java %JAVADOCDIR%Controller\Controller.java %JAVADOCDIR%View\*.java %JAVADOCDIR%Csv\*.java
 

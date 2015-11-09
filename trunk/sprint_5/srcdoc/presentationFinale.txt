@@ -16,7 +16,7 @@ Formation:: DUT INFO S3/Module MPA
 Projet:: OPTI/OPTIweb
 ====
 
-== Les choix techniques
+== Bilan technique : les choix techniques
 
 - Utilisation de Java pour coder notre application.
 - Organiser le code en MVC.
@@ -24,13 +24,45 @@ Projet:: OPTI/OPTIweb
 - Utilisation d'outils de travail en groupe : Github, AsciiDoc, CasperJS, TravisJS, Redmine, la méthode agile SCRUM.
 
 
-== Efficacité de l'équipe
+== Bilan humain : Efficacité de l'équipe 
 
+- Bonne ambiance au sein du groupe
+- Durant le développement de notre projet les développeurs se sont un peu trop isolés et ont parfois utilisé des structures de données ou des fonctions peu pertinentes.
 - Beaucoup de personne sur la documentation, peux de personnes performante en codage MVC.
 - Perte de temps sur la compréhension des attentes du client.
 - Difficulté a faire tout le sprint en une seule journée.
 
-== Solution à apporter
+== Bilan humain : Solution à apporter
 
-- Mieux répartir le travail entre les différents membres de l'équipe.
-- Avoir plus de temps en cour pour devellopper l'application principale.
+- Mieux répartir le travail entre les différents membres de l'équipe (éliminer les temps d'attentes)
+- Avoir plus de temps en cours pour devellopper l'application principale.
+
+== Bilan global : 
+
+- Quels éléments ont été favorables à la réussite du projet ?
+
+* Un scrum de qualité
+
+- Quelles difficultés ont été rencontrées ?
+
+* UTF-8
+* Travis
+* Casper
+* Codage MVC
+* Plannifier les tâches sur redmine
+
+- Le projet initial a-t-il été suivi ? 
+
+* Non, il manque quelques fonctionnalités
+
+- Les objectifs ont-ils été atteints ?
+
+* Non
+
+- Le budget prévisionnel a-t-il été respecté ?
+
+* Non, car nous avons dû faire des heures supplémentaires.
+
+- Comment le projet a-t-il été vécu par les membres du groupe ?
+
+* Deux sont quasi absent tout le temps, un a perdu du temps sur les documentations, le Scrum a beaucoup codé en dehors de l'IUT, deux ont essayés de remplir toutes les autres fonctions.
